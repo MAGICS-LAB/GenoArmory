@@ -1,0 +1,1914 @@
+[
+    {
+        "known_id": 0,
+        "subject": "G",
+        "attribute": "CATTAG",
+        "template": "{}TTCCCATGGGAGAGTTCTGTAGGACTATAGGTTGGTCGTATATTGCTGAGTCAGCACTTATGGAGCACTACCAAAAGAATCATTATCATGCATG",
+        "prediction": "CATTAG",
+        "prompt": "GTTCCCATGGGAGAGTTCTGTAGGACTATAGGTTGGTCGTATATTGCTGAGTCAGCACTTATGGAGCACTACCAAAAGAATCATTATCATGCATG"
+    },
+    {
+        "known_id": 1,
+        "subject": "TCAAG",
+        "attribute": "TCA",
+        "template": "AGATGCAGTCAGCAGGAAATG{}ATTTTATGCAAGTGGCTG",
+        "prediction": "TCACACCATCTTGTGAGCTCACATTGAGTATGTAATTTTCACTCAACATGGGGTCAA",
+        "prompt": "AGATGCAGTCAGCAGGAAATGTCAAGATTTTATGCAAGTGGCTG"
+    },
+    {
+        "known_id": 2,
+        "subject": "AAGAG",
+        "attribute": "CCACG",
+        "template": "ACATGTCTTGTGCCATGAGCCCA{}ACCATGAGTCAGCACACCGACCTCAGACATCATTACACAGCAG",
+        "prediction": "CCACGTCAGAGTGTTAGCCAAGTAGATAAA",
+        "prompt": "ACATGTCTTGTGCCATGAGCCCAAAGAGACCATGAGTCAGCACACCGACCTCAGACATCATTACACAGCAG"
+    },
+    {
+        "known_id": 3,
+        "subject": "TAT",
+        "attribute": "CTCCCA",
+        "template": "{}",
+        "prediction": "CTCCCACATCCATCCAAGTTTTGTGTTTTTCTCAGCCCATTTCATTTTTTTGTCTCGTTAAGCTTGTACTGTCGTTTTTGATTCAGTCATTAACATGT",
+        "prompt": "TAT"
+    },
+    {
+        "known_id": 4,
+        "subject": "ATTTGTT",
+        "attribute": "CCTACTT",
+        "template": "CGCATCTCTCAGGAAAAAAGACTCAGCAAAGCCCACACCA{}TCTTTGTTTATTCA",
+        "prediction": "CCTACTTATATTAACAGCTCCCACCATTGTGAACCGCAGA",
+        "prompt": "CGCATCTCTCAGGAAAAAAGACTCAGCAAAGCCCACACCAATTTGTTTCTTTGTTTATTCA"
+    },
+    {
+        "known_id": 5,
+        "subject": "CTCATG",
+        "attribute": "TCGCG",
+        "template": "GCCCAACT{}AAG",
+        "prediction": "TCGCGAATTTAGCTACCCCTCTCAGGTTCACACGAGTCCGTGGGTGCCGGGGACGTGACCTTAGACAAGAGACATTCCAGGCCC",
+        "prompt": "GCCCAACTCTCATGAAG"
+    },
+    {
+        "known_id": 6,
+        "subject": "CCA",
+        "attribute": "AGG",
+        "template": "{}TTGGAGGTCAGGAG",
+        "prediction": "AGGACCTGTGGAAGTTGCACCTGACAGGCTCTGATCATCTGCCCTTAAGGGGAGACAGGGGTCTAATTGGCTGGACTGTGCTGC",
+        "prompt": "CCATTGGAGGTCAGGAG"
+    },
+    {
+        "known_id": 7,
+        "subject": "AAGAG",
+        "attribute": "CTTTG",
+        "template": "TTGGAATACGGCCTTTTGGTCAGCCTCTCT{}CTTTGTTCCAGTTGAGGATTTGTGTTATTTTGACATG",
+        "prediction": "CTTTGCCATGTTTGCAGCACTCCTTGCTC",
+        "prompt": "TTGGAATACGGCCTTTTGGTCAGCCTCTCTAAGAGCTTTGTTCCAGTTGAGGATTTGTGTTATTTTGACATG"
+    },
+    {
+        "known_id": 8,
+        "subject": "ATGTG",
+        "attribute": "ACA",
+        "template": "{}",
+        "prediction": "ACATGATGCTTCCTAGTCCAGCAGAGCTGCCTTATCCACCAGCTCAACTGTATAGCAAGAACCATTGCTTGCCCTCATCCCAATGACTAAGTAAGT",
+        "prompt": "ATGTG"
+    },
+    {
+        "known_id": 9,
+        "subject": "TAA",
+        "attribute": "CTCT",
+        "template": "CCGCCTAACAAGAGCAGTAAGGTGGGTGCCTTCCTCAGGAGCATGGTCTCTGAAGACTTGCTGGCTCAGCA{}ATCTTCCTACT",
+        "prediction": "CTCTCATGTCAGAACG",
+        "prompt": "CCGCCTAACAAGAGCAGTAAGGTGGGTGCCTTCCTCAGGAGCATGGTCTCTGAAGACTTGCTGGCTCAGCATAAATCTTCCTACT"
+    },
+    {
+        "known_id": 10,
+        "subject": "TCTTAA",
+        "attribute": "TAT",
+        "template": "AATTTTTG{}TTTG",
+        "prediction": "TATCCAGAAAAGCACAGAAACTTCTATACACATGCACACAAGCACACACACACACACACACACACACACACACACACACACAC",
+        "prompt": "AATTTTTGTCTTAATTTG"
+    },
+    {
+        "known_id": 11,
+        "subject": "TGGCA",
+        "attribute": "CAGCA",
+        "template": "AACAGTTACACACAGAGGTTAGCTG{}CTGTGCCAAGACCCTGTGGCCCAAGGAGGATGGTAGAGCAAGCTGACTCATCA",
+        "prediction": "CAGCAATGTGGTGACTCA",
+        "prompt": "AACAGTTACACACAGAGGTTAGCTGTGGCACTGTGCCAAGACCCTGTGGCCCAAGGAGGATGGTAGAGCAAGCTGACTCATCA"
+    },
+    {
+        "known_id": 12,
+        "subject": "CACG",
+        "attribute": "TTCA",
+        "template": "GGCCCCTAGTCAGCAACAAGGAAAACTCT{}CTAACCAGACAAACAATACAGACTCAGCAAAAACATAAACGGAAGGATGTGCCCACAAG",
+        "prediction": "TTCACCTGA",
+        "prompt": "GGCCCCTAGTCAGCAACAAGGAAAACTCTCACGCTAACCAGACAAACAATACAGACTCAGCAAAAACATAAACGGAAGGATGTGCCCACAAG"
+    },
+    {
+        "known_id": 13,
+        "subject": "TGTAG",
+        "attribute": "TTCG",
+        "template": "CAATTCACTTCAAGTGCAGCTCATATAGGTCAGCTTGCCAGCCAGTTTCCGTAG{}TGGTTATCACGTTCGCCTCACACGCGAAAGGTCCCCGG",
+        "prediction": "TTCG",
+        "prompt": "CAATTCACTTCAAGTGCAGCTCATATAGGTCAGCTTGCCAGCCAGTTTCCGTAGTGTAGTGGTTATCACGTTCGCCTCACACGCGAAAGGTCCCCGG"
+    },
+    {
+        "known_id": 14,
+        "subject": "AAAACA",
+        "attribute": "CCGTTG",
+        "template": "AAAAAAAAACAGTCTGATAAATAATGCAG{}TTGGTAGTGAACAATTTTCTGGTCAAGGATGGATTCTGATAA",
+        "prediction": "CCGTTGTGTGACGAGGAATCGATT",
+        "prompt": "AAAAAAAAACAGTCTGATAAATAATGCAGAAAACATTGGTAGTGAACAATTTTCTGGTCAAGGATGGATTCTGATAA"
+    },
+    {
+        "known_id": 15,
+        "subject": "CATT",
+        "attribute": "CAAA",
+        "template": "TG{}CTCAATGATTTTCAGACACTAGTGGGGTTAGATACCAG",
+        "prediction": "CAAATCAGATTTGAGGCCCCGCTTTCCAATTAGTGGCTGGCCTTACAGGCTTTTTAT",
+        "prompt": "TGCATTCTCAATGATTTTCAGACACTAGTGGGGTTAGATACCAG"
+    },
+    {
+        "known_id": 16,
+        "subject": "TACAG",
+        "attribute": "TCA",
+        "template": "TCAGAGCACACAGCACTAAGTCATCTT{}TGAGCACACAGCGCTGAG",
+        "prediction": "TCATCTTTACAGTGAGCACACAGCGCTGAGTCATCTTTACAGTGAGCACAC",
+        "prompt": "TCAGAGCACACAGCACTAAGTCATCTTTACAGTGAGCACACAGCGCTGAG"
+    },
+    {
+        "known_id": 17,
+        "subject": "TTCT",
+        "attribute": "AGGTCT",
+        "template": "G{}CTT",
+        "prediction": "AGGTCTCTCCTGATGTAATAGTGATTAAGAGAAGCATAGGTAGCTAGATTTTTTTTTTTTTTTTTTTTTTGCTGACTCGGCAGTTTCCTGTGG",
+        "prompt": "GTTCTCTT"
+    },
+    {
+        "known_id": 18,
+        "subject": "AG",
+        "attribute": "CTGGG",
+        "template": "{}TATTAATATTGGTGATGAAAAATCGACGTCCCAATTAGATCAACGGCTAGCCCTGCCGGCATAGGCG",
+        "prediction": "CTGGGAAAAGCGGTTGGCAGGAAACAAAAAGG",
+        "prompt": "AGTATTAATATTGGTGATGAAAAATCGACGTCCCAATTAGATCAACGGCTAGCCCTGCCGGCATAGGCG"
+    },
+    {
+        "known_id": 19,
+        "subject": "CTTGGAA",
+        "attribute": "TTG",
+        "template": "TCTGAACCAACAAAATGAGGAA{}AGGGAACGATACTAGATACCATGTCA",
+        "prediction": "TTGTACCTCCATGAAGAACTCAATGAGAAATTTTGGGGTAATAAGA",
+        "prompt": "TCTGAACCAACAAAATGAGGAACTTGGAAAGGGAACGATACTAGATACCATGTCA"
+    },
+    {
+        "known_id": 20,
+        "subject": "ACTT",
+        "attribute": "ACCGACG",
+        "template": "GCCGGTTG{}ATTTTCGGAGCGTCA",
+        "prediction": "ACCGACGCTTTTGTAGGGGCGTCAAGGGGGTCTCTGTACGCTCAAAGTTTCTCGGCAGAGCAGTCCTGACGCGG",
+        "prompt": "GCCGGTTGACTTATTTTCGGAGCGTCA"
+    },
+    {
+        "known_id": 21,
+        "subject": "CATT",
+        "attribute": "CAAAAG",
+        "template": "TATAAATTCA{}ACACTAATTAG",
+        "prediction": "CAAAAGACACTTTCGACGAGGATGGGATTCGAACCCATGCGTGCAGAGCACAATGGATTAGCAGTCCATCGCCTTA",
+        "prompt": "TATAAATTCACATTACACTAATTAG"
+    },
+    {
+        "known_id": 22,
+        "subject": "AGG",
+        "attribute": "CTTGCTG",
+        "template": "{}TCCATCACTTCCCACTTTAGTTTTGAATAGGGTCTCTCAATGATCCTGAAG",
+        "prediction": "CTTGCTGACTAAGCAAGATCATCTTGTGAGTCCCAGGGTTACTCTTA",
+        "prompt": "AGGTCCATCACTTCCCACTTTAGTTTTGAATAGGGTCTCTCAATGATCCTGAAG"
+    },
+    {
+        "known_id": 23,
+        "subject": "TTGG",
+        "attribute": "TCAATG",
+        "template": "AACTCCTCAGAAAGCAGGTG{}CCCATGCTTGGACATGTGCTACCA",
+        "prediction": "TCAATGCCCCAGTGTTCAGAGCGACCGAGCACAGTACTGCTGTGTCAGCATTT",
+        "prompt": "AACTCCTCAGAAAGCAGGTGTTGGCCCATGCTTGGACATGTGCTACCA"
+    },
+    {
+        "known_id": 24,
+        "subject": "CCCAG",
+        "attribute": "CAGG",
+        "template": "AAGTT{}TCAGCCTGTGTGGGGAGAGGCAGCCAGGCTTCCGGTGGGTGAGTCAGCAGACACTGGGTGCTGACTCACCA",
+        "prediction": "CAGGCATGCCAGTCACTGCC",
+        "prompt": "AAGTTCCCAGTCAGCCTGTGTGGGGAGAGGCAGCCAGGCTTCCGGTGGGTGAGTCAGCAGACACTGGGTGCTGACTCACCA"
+    },
+    {
+        "known_id": 25,
+        "subject": "TAGG",
+        "attribute": "CTGG",
+        "template": "{}AGAA",
+        "prediction": "CTGGAAGAACCTAGCCTCACAGAATTCAAGGAAGGGGAGAGTTGCAAGAAATAAAAGATGTGTCAGCAAATTCTCCAGAAAAGTAATATATGA",
+        "prompt": "TAGGAGAA"
+    },
+    {
+        "known_id": 26,
+        "subject": "AAAAG",
+        "attribute": "CTTTTG",
+        "template": "{}ACTT",
+        "prediction": "CTTTTGATAAGGACTCAATTAGAGAAAGTAAATACTAGCTTGAAAAGGCTGGAAGGAATAGAACACAAATCTACACACGTGGATCTATTTGC",
+        "prompt": "AAAAGACTT"
+    },
+    {
+        "known_id": 27,
+        "subject": "ACCAGG",
+        "attribute": "AAAT",
+        "template": "CAG{}CCCTGACACCTGTGAATTTGCATCTGCTGAGTCAGAGTGAATCAGCAAAAACAGAGGGGGGAGGGAAAGATCTTTAAAAGCCTCATTG",
+        "prediction": "AAAT",
+        "prompt": "CAGACCAGGCCCTGACACCTGTGAATTTGCATCTGCTGAGTCAGAGTGAATCAGCAAAAACAGAGGGGGGAGGGAAAGATCTTTAAAAGCCTCATTG"
+    },
+    {
+        "known_id": 28,
+        "subject": "CAGCA",
+        "attribute": "ATGAAG",
+        "template": "GCATGTTCATGCTGGAGGACGACCGCTTCGG{}CCTCCACCAGCACATTTTTCCTTGACATCA",
+        "prediction": "ATGAAGATGCTGAGCCAGCATTTTATGACCGACCT",
+        "prompt": "GCATGTTCATGCTGGAGGACGACCGCTTCGGCAGCACCTCCACCAGCACATTTTTCCTTGACATCA"
+    },
+    {
+        "known_id": 29,
+        "subject": "CAAA",
+        "attribute": "ATTCAG",
+        "template": "CTCAGGGGGG{}CAGGACCAGCTAACCCAACATCTCTAGACAATATTATCCAACCCCCCTGCCATGGACTTGCA",
+        "prediction": "ATTCAGCAAGCAGCAGAACAGTTGC",
+        "prompt": "CTCAGGGGGGCAAACAGGACCAGCTAACCCAACATCTCTAGACAATATTATCCAACCCCCCTGCCATGGACTTGCA"
+    },
+    {
+        "known_id": 30,
+        "subject": "G",
+        "attribute": "TCTG",
+        "template": "{}ACAAAGGAGACAAGG",
+        "prediction": "TCTGCCCTACTCTGCATAGTCAAGTGTTAGCCCTTGTCTTACTGCACCAGTTTGGCGCCTTTGGTCAAGTCTCAGTGCTGCAGGG",
+        "prompt": "GACAAAGGAGACAAGG"
+    },
+    {
+        "known_id": 31,
+        "subject": "ATCTGAA",
+        "attribute": "ATAAGTT",
+        "template": "TTTTATGTGGGCTGCGGAG{}CTCAGATCATCATGCTGAGTCAGCAAGGTCTCTGAGCATTACAGTCACCCCAAAGCCAGCAAAAA",
+        "prediction": "ATAAGTTTAG",
+        "prompt": "TTTTATGTGGGCTGCGGAGATCTGAACTCAGATCATCATGCTGAGTCAGCAAGGTCTCTGAGCATTACAGTCACCCCAAAGCCAGCAAAAA"
+    },
+    {
+        "known_id": 32,
+        "subject": "AA",
+        "attribute": "AGG",
+        "template": "{}AGGGGAAGTCACTTACTTGGGGGG",
+        "prediction": "AGGCCCCCAAATTTCCGTTGTGTACTTCAGGGAGGGGGTAGATGGTCCAGAGAAAGACTGCTGACTTGGCATAAT",
+        "prompt": "AAAGGGGAAGTCACTTACTTGGGGGG"
+    },
+    {
+        "known_id": 33,
+        "subject": "CG",
+        "attribute": "CCCCTTG",
+        "template": "G{}TTCGGCTGTTAACCGAAAGGTTGGTGGTTCGAGCCCACCCAGGGACGAGCATTTTAATCT",
+        "prediction": "CCCCTTGCTATTCCTTGCTATTCTAAAACACTTCAATG",
+        "prompt": "GCGTTCGGCTGTTAACCGAAAGGTTGGTGGTTCGAGCCCACCCAGGGACGAGCATTTTAATCT"
+    },
+    {
+        "known_id": 34,
+        "subject": "CGG",
+        "attribute": "CAAG",
+        "template": "{}ATCCCTTCACAGCACA",
+        "prediction": "CAAGAATCAATAGCTTCCGTATGCACAACAGACTTGCTGAGTCAGCAAAAATACCCCCTTCCTCTTTTGTTTTTTAACAATA",
+        "prompt": "CGGATCCCTTCACAGCACA"
+    },
+    {
+        "known_id": 35,
+        "subject": "TTCA",
+        "attribute": "TAAG",
+        "template": "AAAAATT{}TTATTTACAG",
+        "prediction": "TAAGCCTTAAAAAGCACTCTGACAGCCTCGCATATATCTACATTCTATGTGATTAGAATTTCCTTTTTTTGTTGTTTTTT",
+        "prompt": "AAAAATTTTCATTATTTACAG"
+    },
+    {
+        "known_id": 36,
+        "subject": "CCTCA",
+        "attribute": "CTGGG",
+        "template": "{}TCTGGCATCA",
+        "prediction": "CTGGGAAGGGAGCCCCTTGGTCCTGTGGAGACTTGATGACTCAGCAGAATACTAGGCTGCTGAGGCAGAAGTGGGTGGGTTTGGAC",
+        "prompt": "CCTCATCTGGCATCA"
+    },
+    {
+        "known_id": 37,
+        "subject": "TG",
+        "attribute": "CTTGG",
+        "template": "CAGGCATGCCCTG{}ATTGCACAGCAGAATTTCTAAAAACAGAACCTGCTGAGTCACACCTCAGACT",
+        "prediction": "CTTGGTCTCTCATTATCTTTGGAAGCATGTGGAG",
+        "prompt": "CAGGCATGCCCTGTGATTGCACAGCAGAATTTCTAAAAACAGAACCTGCTGAGTCACACCTCAGACT"
+    },
+    {
+        "known_id": 38,
+        "subject": "AATG",
+        "attribute": "ATT",
+        "template": "{}CCATTTACT",
+        "prediction": "ATTATAATAATGTTAAGTTAACCCGATGGTTCCCCGGGGCTGACTCAGCATTTTCAGCTAGGAAACTTGAATTCTCCTCTTGTGAAAA",
+        "prompt": "AATGCCATTTACT"
+    },
+    {
+        "known_id": 39,
+        "subject": "TACA",
+        "attribute": "ACTTGTT",
+        "template": "TTTTTAAGGCATTAATAGTAAAGGAGAATGAA{}TTTTTGCTGAGTCAGCAAAATTCTCAGGCTT",
+        "prediction": "ACTTGTTCCACCTTTGGTTTTGGATGTGTGGGCA",
+        "prompt": "TTTTTAAGGCATTAATAGTAAAGGAGAATGAATACATTTTTGCTGAGTCAGCAAAATTCTCAGGCTT"
+    },
+    {
+        "known_id": 40,
+        "subject": "CAAACA",
+        "attribute": "CTGAG",
+        "template": "{}",
+        "prediction": "CTGAGTCAGCTTTCTTCAAGTCCTTGCTCCTGCTGTAGCCACTCAGGAGCCCTCCTGACTAGACCATGACTCAGGCCCTTGTGGTGTTACGGTTA",
+        "prompt": "CAAACA"
+    },
+    {
+        "known_id": 41,
+        "subject": "CAACA",
+        "attribute": "ACT",
+        "template": "GCATAGGAGACT{}CCCTGAGGCTAGAGAGGTGACTCGGCAGTTAAAGAGCGGTGACTCAGCAGTTAAAGAGAGGTG",
+        "prediction": "ACTCAGCAGTTAAAGAGAGGT",
+        "prompt": "GCATAGGAGACTCAACACCCTGAGGCTAGAGAGGTGACTCGGCAGTTAAAGAGCGGTGACTCAGCAGTTAAAGAGAGGTG"
+    },
+    {
+        "known_id": 42,
+        "subject": "TGG",
+        "attribute": "CCTAA",
+        "template": "TGTAGTGACCCAG{}",
+        "prediction": "CCTAATGGATAAGGCATCAGCCTCCGGAGCTGGGGATTGTGGGTTCGAGTCCCATCTGGGTCGCATGGTCGTTCATTTTTATTGA",
+        "prompt": "TGTAGTGACCCAGTGG"
+    },
+    {
+        "known_id": 43,
+        "subject": "AG",
+        "attribute": "ACTGCCA",
+        "template": "{}",
+        "prediction": "ACTGCCACTGGGCGAGCACTACTCCGCTCCCTTAGAAGATGTTTCCGAGAGCTCCTCCGCCTCCCAAGTCCTCAAACTTTCGGCGAGGTGGAAGTGAGA",
+        "prompt": "AG"
+    },
+    {
+        "known_id": 44,
+        "subject": "TCCA",
+        "attribute": "TCTTCTT",
+        "template": "GCAGACCCAG{}CTTGAGCTGAAAAAAAAGTGGTGCAAATTTAGAG",
+        "prediction": "TCTTCTTAGTTCTGGCAAAGATGAGAAATCTGTCATTTAAAAGCACCTTGCTG",
+        "prompt": "GCAGACCCAGTCCACTTGAGCTGAAAAAAAAGTGGTGCAAATTTAGAG"
+    },
+    {
+        "known_id": 45,
+        "subject": "CAGCA",
+        "attribute": "CTGATG",
+        "template": "TAATTGACATTTCCTGGCCCTTCAAGACCTAAATCAAATGTTGCTGACT{}CAGCCTCAGCAATACTTAGGGATGAACAAG",
+        "prediction": "CTGATGACTGGTTAGAT",
+        "prompt": "TAATTGACATTTCCTGGCCCTTCAAGACCTAAATCAAATGTTGCTGACTCAGCACAGCCTCAGCAATACTTAGGGATGAACAAG"
+    },
+    {
+        "known_id": 46,
+        "subject": "TTTCA",
+        "attribute": "CAAGTTG",
+        "template": "TCCA{}TCAAGTTCCCCGCGATTTCATCATCCGTTTTTCT",
+        "prediction": "CAAGTTGTCTTTTCTCAGTTTAGTGATTTTTATTACACAGGAGTTCACGTGTGCATTT",
+        "prompt": "TCCATTTCATCAAGTTCCCCGCGATTTCATCATCCGTTTTTCT"
+    },
+    {
+        "known_id": 47,
+        "subject": "CGGTT",
+        "attribute": "CAAA",
+        "template": "GCAGGAGGATCTGGAGTTCGAGGACAGCCTGGTCTACACGCTTTTTTTCTCTCCCATTTTCAACAAAACCACAAATCCA{}ATACTGCGCCCC",
+        "prediction": "CAAAC",
+        "prompt": "GCAGGAGGATCTGGAGTTCGAGGACAGCCTGGTCTACACGCTTTTTTTCTCTCCCATTTTCAACAAAACCACAAATCCACGGTTATACTGCGCCCC"
+    },
+    {
+        "known_id": 48,
+        "subject": "ATCTGAA",
+        "attribute": "CAAGAG",
+        "template": "TTCT{}CCCCTG",
+        "prediction": "CAAGAGCTAAGCAGTCGGGAGAGGGAGCCCTCGAGAAAAGGAGGCGGAGGAATGACTTGGAGAACCCAGCATCTTCATACTGAT",
+        "prompt": "TTCTATCTGAACCCCTG"
+    },
+    {
+        "known_id": 49,
+        "subject": "TGGGTGG",
+        "attribute": "TCAGCGG",
+        "template": "CTGG{}CCTCCGTGTCAAGGCTTTCCACATATATCACAAGCTG",
+        "prediction": "TCAGCGGATCACAAGCTGGTCTGTGGTTTAAAATAAGATAATTCATTTCCTGC",
+        "prompt": "CTGGTGGGTGGCCTCCGTGTCAAGGCTTTCCACATATATCACAAGCTG"
+    },
+    {
+        "known_id": 50,
+        "subject": "G",
+        "attribute": "CTTGAG",
+        "template": "{}",
+        "prediction": "CTTGAGCTTCCTCTCGTGTTCCAGGCCAAGGAATTATGCCATATGGCAGAATGAAGAAGTTCTTCTGGCTTTCTGATGGATTGCAGCTGGCTAAGAGACA",
+        "prompt": "G"
+    },
+    {
+        "known_id": 51,
+        "subject": "GGG",
+        "attribute": "AGGGG",
+        "template": "{}",
+        "prediction": "AGGGGAGCAGAGAGAGGAGTGAGGACGGACTCAGAAAATGCTGACTCAGCGCTGAGGAGAATGACTCAGACTCGGATCCTAACTGAATGAGGAAGACA",
+        "prompt": "GGG"
+    },
+    {
+        "known_id": 52,
+        "subject": "AAGGAG",
+        "attribute": "ACATTG",
+        "template": "CACTGTCTCTGGACTGCCCTCTTCTGGTTGTTTTTTAAAAGTGTT{}CAGGAATGCTT",
+        "prediction": "ACATTGCAGAATATGGGGTTCCCTCACTACTTCAAAGAT",
+        "prompt": "CACTGTCTCTGGACTGCCCTCTTCTGGTTGTTTTTTAAAAGTGTTAAGGAGCAGGAATGCTT"
+    },
+    {
+        "known_id": 53,
+        "subject": "AAAAG",
+        "attribute": "TAATT",
+        "template": "GACCTCT{}AATGTCCTCCTGAAGCACCTCCTTCTT",
+        "prediction": "TAATTTAACTCCTATCTGGCAGTCTTTAATTCTAAGCAATGAGAGCTTGATCAAGTTGTATG",
+        "prompt": "GACCTCTAAAAGAATGTCCTCCTGAAGCACCTCCTTCTT"
+    },
+    {
+        "known_id": 54,
+        "subject": "CAG",
+        "attribute": "ACGTTG",
+        "template": "GGACCTCTCGCACCCAAAGCGAGAATCATACCCCTAGACCAACGAGCCACGGTGACAAG{}CCTCA",
+        "prediction": "ACGTTGATCTTTAGGTATCTCGAGCTGAATGACA",
+        "prompt": "GGACCTCTCGCACCCAAAGCGAGAATCATACCCCTAGACCAACGAGCCACGGTGACAAGCAGCCTCA"
+    },
+    {
+        "known_id": 55,
+        "subject": "ATCTT",
+        "attribute": "CC",
+        "template": "TCTTTGGTGGCTCCAATCCAGGTCTACT{}CCCTCTCAAGCCTCTGTCTCCTAACTTCCCTGGTGGTCTAGTGGTTAGGATTCGGCGCTCTCACCG",
+        "prediction": "CC",
+        "prompt": "TCTTTGGTGGCTCCAATCCAGGTCTACTATCTTCCCTCTCAAGCCTCTGTCTCCTAACTTCCCTGGTGGTCTAGTGGTTAGGATTCGGCGCTCTCACCG"
+    },
+    {
+        "known_id": 56,
+        "subject": "TCCG",
+        "attribute": "TCCCGG",
+        "template": "AAACCGTGCGGCCGGTAATGCGTTTAAGTTGCATCCAGG{}TAAGAG",
+        "prediction": "TCCCGGCAGCAACTCTTGTCTCCGGGAGCTTCGATTGCTAGATCTGGGATTA",
+        "prompt": "AAACCGTGCGGCCGGTAATGCGTTTAAGTTGCATCCAGGTCCGTAAGAG"
+    },
+    {
+        "known_id": 57,
+        "subject": "CTCTTG",
+        "attribute": "AAGTT",
+        "template": "TTCCATGAGG{}CCTCTAGCATCTGTTAACAGAGGCCTAGATTCTGCCTTTGGTTTTTAGGGAAAGTGTATTCATACTCCAG",
+        "prediction": "AAGTTTCTGAGCTGA",
+        "prompt": "TTCCATGAGGCTCTTGCCTCTAGCATCTGTTAACAGAGGCCTAGATTCTGCCTTTGGTTTTTAGGGAAAGTGTATTCATACTCCAG"
+    },
+    {
+        "known_id": 58,
+        "subject": "TATT",
+        "attribute": "TAA",
+        "template": "ACATTTT{}TATCTTTATATGTATATCTGCGGGTAGAATGACCATCACAAAG",
+        "prediction": "TAAATATGAAATAAATGCTTACTCAGCGAAATTCTAGTTCCCTCGAT",
+        "prompt": "ACATTTTTATTTATCTTTATATGTATATCTGCGGGTAGAATGACCATCACAAAG"
+    },
+    {
+        "known_id": 59,
+        "subject": "AGGG",
+        "attribute": "ATGGCCA",
+        "template": "GAG{}ACGAACTAGGGCACGAGAATACGGGGGGGGAGTAGAAGTAACCCA",
+        "prediction": "ATGGCCATTAACTCTATAGTCCGGACCTTGTGGCCCTCTTGCTTATCGT",
+        "prompt": "GAGAGGGACGAACTAGGGCACGAGAATACGGGGGGGGAGTAGAAGTAACCCA"
+    },
+    {
+        "known_id": 60,
+        "subject": "CTGGGCA",
+        "attribute": "ACAG",
+        "template": "GGGGTAATGGCTAGAAAGACAACA{}CCTAAGACTCAACGCCACCTTTGTGGATATCAAGTGAGCACCAAGAGCCGTTTTGAG",
+        "prediction": "ACAGTCCTCAGCG",
+        "prompt": "GGGGTAATGGCTAGAAAGACAACACTGGGCACCTAAGACTCAACGCCACCTTTGTGGATATCAAGTGAGCACCAAGAGCCGTTTTGAG"
+    },
+    {
+        "known_id": 61,
+        "subject": "ATGCAG",
+        "attribute": "TGCA",
+        "template": "AAGGACAAA{}",
+        "prediction": "TGCAAAAATAAAACATGAAAGTACTAAAAGAAAAATCTCCCAAAAAAATGAAATGAAAAAAGAAAAAGACAGGCCAGAAGCTGTCC",
+        "prompt": "AAGGACAAAATGCAG"
+    },
+    {
+        "known_id": 62,
+        "subject": "AGTG",
+        "attribute": "CATG",
+        "template": "TGCCCTCT{}CTTGCTGTTTAGGTCA",
+        "prediction": "CATGTGAAGTCCAAAGTGTGTGTGTGTTCAGTGTATGTATGTGCCAGATTGTATGTATACATATACACATATA",
+        "prompt": "TGCCCTCTAGTGCTTGCTGTTTAGGTCA"
+    },
+    {
+        "known_id": 63,
+        "subject": "CCAGAGG",
+        "attribute": "TTCT",
+        "template": "TCTCTGAG{}TGCTAGAGCAG",
+        "prediction": "TTCTCCTCCCGATGAGGGGTCCGTGTCTGGGTCGGTTGCGGAATCATGGTAAATGGTCGGGTTTGCTACTCTCGC",
+        "prompt": "TCTCTGAGCCAGAGGTGCTAGAGCAG"
+    },
+    {
+        "known_id": 64,
+        "subject": "CAGACT",
+        "attribute": "AT",
+        "template": "{}AGGGGGG",
+        "prediction": "ATCCTTGAGTATACAGGGGAGTTGGAGAGAAACTTGAATCAAGGACAATGAGTTGTCTGTACGGAGTGAAACATAGCAGTGGAGGAGG",
+        "prompt": "CAGACTAGGGGGG"
+    },
+    {
+        "known_id": 65,
+        "subject": "TCA",
+        "attribute": "TGACA",
+        "template": "TCATTGCTTTTAACTGCTGAG{}CCTTTTCTTAAATGTACTTTTATCTGGGAAATTGGTTGAGTAAAATGTTAG",
+        "prediction": "TGACATCTGGCTGACGAGGGGCATCT",
+        "prompt": "TCATTGCTTTTAACTGCTGAGTCACCTTTTCTTAAATGTACTTTTATCTGGGAAATTGGTTGAGTAAAATGTTAG"
+    },
+    {
+        "known_id": 66,
+        "subject": "TG",
+        "attribute": "TAAGTT",
+        "template": "TCCGGAAGGG{}AGAGCTGGCCGGGTTCTCTTGGCCATTGGCA",
+        "prediction": "TAAGTTTCCATTCCATTGAGTGGTATACATCCGGTGTCCTGCATGTATTGAGGGTCGA",
+        "prompt": "TCCGGAAGGGTGAGAGCTGGCCGGGTTCTCTTGGCCATTGGCA"
+    },
+    {
+        "known_id": 67,
+        "subject": "CTG",
+        "attribute": "AAGTCG",
+        "template": "TGGTTATTTTCGCCTAACAGCTGTGTTTCCGGCAAGCAGCTGAGGGGTTCTT{}ACTCAGCAAAACCAGAGAGCTAACTGTCAAG",
+        "prediction": "AAGTCGCTCGAGCGG",
+        "prompt": "TGGTTATTTTCGCCTAACAGCTGTGTTTCCGGCAAGCAGCTGAGGGGTTCTTCTGACTCAGCAAAACCAGAGAGCTAACTGTCAAG"
+    },
+    {
+        "known_id": 68,
+        "subject": "ATG",
+        "attribute": "TCA",
+        "template": "TAGACTCTGCATCACCTACAGCCATGCTTGCAGCACTGCTCCCCTT{}AGAG",
+        "prediction": "TCACATTGTCTCTGATCTGCCTCATACAGACTGTGCTGCCTGAGTGAG",
+        "prompt": "TAGACTCTGCATCACCTACAGCCATGCTTGCAGCACTGCTCCCCTTATGAGAG"
+    },
+    {
+        "known_id": 69,
+        "subject": "ATTGTTG",
+        "attribute": "TCTTTTG",
+        "template": "TAGGGTCATAAACA{}",
+        "prediction": "TCTTTTGATTGCTGGAATGACTCTGTAGATTGAAGGTCTTTTACTGGCGTTGCAAACCTACTTCTGATAATCAGGGCTTT",
+        "prompt": "TAGGGTCATAAACAATTGTTG"
+    },
+    {
+        "known_id": 70,
+        "subject": "CGGCCA",
+        "attribute": "TTGG",
+        "template": "{}AGGG",
+        "prediction": "TTGGTCCAGGGAATGCCTGGAGGGGCAGAGCTGGGCCTCAGTTGGAGCTAATTTGCCAGAGGCCATGGCAGCCGAATAAGTTAATGTCTGA",
+        "prompt": "CGGCCAAGGG"
+    },
+    {
+        "known_id": 71,
+        "subject": "ACCAG",
+        "attribute": "ACTCTG",
+        "template": "TGACTTTGTGAACTCTACCAATG{}CTGCAGCAGAGATGACTCTCCTGCCATCTCTCACCTCTATCTCTCTCTGGGTCTGACA",
+        "prediction": "ACTCTGCTATGTGCG",
+        "prompt": "TGACTTTGTGAACTCTACCAATGACCAGCTGCAGCAGAGATGACTCTCCTGCCATCTCTCACCTCTATCTCTCTCTGGGTCTGACA"
+    },
+    {
+        "known_id": 72,
+        "subject": "CCAAAGG",
+        "attribute": "AAATG",
+        "template": "{}",
+        "prediction": "AAATGAAAAATAATGTAACGGAAACCTTTGAAAGGTGTGCTGAGTCAGCGCCCCCTGGATGGCTGTGGGTAGAAGTCAGGGTGGCCGCACTCTA",
+        "prompt": "CCAAAGG"
+    },
+    {
+        "known_id": 73,
+        "subject": "CCCTCT",
+        "attribute": "TGTT",
+        "template": "TCT{}CTCTGGGCCCAGAATCTCCACTTTTTCCTCTCCTGCTCAGCCATCTGATATTCAGCTCTT",
+        "prediction": "TGTTTAACCAATCAGAAGATGATGGAGAAGAA",
+        "prompt": "TCTCCCTCTCTCTGGGCCCAGAATCTCCACTTTTTCCTCTCCTGCTCAGCCATCTGATATTCAGCTCTT"
+    },
+    {
+        "known_id": 74,
+        "subject": "TTTT",
+        "attribute": "ACA",
+        "template": "ATCTGCTTGTGTAGCTAGAAGGCG{}TAGAGAGCAATAATTGGAACAGTCACAATGCAGTCATCCCTCGAGCAAGTAAAGGGTGTGCCTGAAGGG",
+        "prediction": "ACAA",
+        "prompt": "ATCTGCTTGTGTAGCTAGAAGGCGTTTTTAGAGAGCAATAATTGGAACAGTCACAATGCAGTCATCCCTCGAGCAAGTAAAGGGTGTGCCTGAAGGG"
+    },
+    {
+        "known_id": 75,
+        "subject": "CTGTG",
+        "attribute": "CCTGGG",
+        "template": "{}TCAGAACCTGCAGCAGAGCTTAGCCCTGTCCCTGAAGTGTAATGCAGGGAG",
+        "prediction": "CCTGGGCCCAGACTTAGCACCCTCCACTGGCCAGCAAAAGGGAAT",
+        "prompt": "CTGTGTCAGAACCTGCAGCAGAGCTTAGCCCTGTCCCTGAAGTGTAATGCAGGGAG"
+    },
+    {
+        "known_id": 76,
+        "subject": "CCCT",
+        "attribute": "ACTT",
+        "template": "{}CATGCCAGCCGACATGATCTCCCTCTGGGTCAGAAAT",
+        "prediction": "ACTTCATGGTCTGGCAAGAGGCTTTATGTGCAGATGCTATGAAATCACAAAACGAGAAAT",
+        "prompt": "CCCTCATGCCAGCCGACATGATCTCCCTCTGGGTCAGAAAT"
+    },
+    {
+        "known_id": 77,
+        "subject": "TCCTT",
+        "attribute": "ATTTT",
+        "template": "{}TCTTATTTCGGTCAGTCATTAGTTTTCACATGTAAGAGATATCTCATTTCATTTTTCCA",
+        "prediction": "ATTTTTAGGCTCATCATTGGGATTCCCTTGTTTTCGG",
+        "prompt": "TCCTTTCTTATTTCGGTCAGTCATTAGTTTTCACATGTAAGAGATATCTCATTTCATTTTTCCA"
+    },
+    {
+        "known_id": 78,
+        "subject": "CTATG",
+        "attribute": "CCTCAG",
+        "template": "{}AAGTT",
+        "prediction": "CCTCAGCTGTAATTATTCTAGTTACTGAAGAGCGACTTGAGGAGTGGACTGAGCTGGTCCAAAAGAATAAACAGCTAAATTTCATATTATA",
+        "prompt": "CTATGAAGTT"
+    },
+    {
+        "known_id": 79,
+        "subject": "AGGTT",
+        "attribute": "TGCTG",
+        "template": "CTTGGTGAAGATCAGCTCAGGCATACTAATCTTCAGGGACTGAGTCTG{}TCAGCTT",
+        "prediction": "TGCTGCCGGGGGTAGCTGACTTGCAGGATCCATTCTAATCT",
+        "prompt": "CTTGGTGAAGATCAGCTCAGGCATACTAATCTTCAGGGACTGAGTCTGAGGTTTCAGCTT"
+    },
+    {
+        "known_id": 80,
+        "subject": "AGCAG",
+        "attribute": "CTGCTG",
+        "template": "CTGAACTCAGGTCCTCTGCAAG{}CAAGTGTTATTAA",
+        "prediction": "CTGCTGAGTCATCGTTTCAGCTTCCAGCCTTTGATGTTTTTGAGAAAAGATCTCACTATGT",
+        "prompt": "CTGAACTCAGGTCCTCTGCAAGAGCAGCAAGTGTTATTAA"
+    },
+    {
+        "known_id": 81,
+        "subject": "AAG",
+        "attribute": "TCT",
+        "template": "TCTTGGCTGAACTTTGCCTGATAATTACCCAGCCTGTTTGCACATATGGAAACGGGAGACCTT{}AGTT",
+        "prediction": "TCTCAATCAGGACAGACCCCGAGGAACTTCA",
+        "prompt": "TCTTGGCTGAACTTTGCCTGATAATTACCCAGCCTGTTTGCACATATGGAAACGGGAGACCTTAAGAGTT"
+    },
+    {
+        "known_id": 82,
+        "subject": "ACG",
+        "attribute": "TTTCC",
+        "template": "GGAGGCTGCGGAACCAAAACTGCTGTGTCATTGCG{}CTGCAGCTGTTGCCTGGGTGACAGGGTGAG",
+        "prediction": "TTTCCCACGCTTGCCCCTGGCGGCCAGCGGGCA",
+        "prompt": "GGAGGCTGCGGAACCAAAACTGCTGTGTCATTGCGACGCTGCAGCTGTTGCCTGGGTGACAGGGTGAG"
+    },
+    {
+        "known_id": 83,
+        "subject": "AGGTT",
+        "attribute": "TCGGG",
+        "template": "CTCCCAGAGTGGTAGCAAGCACAGGTTTCACCCTCACCGCAATGTGGGGGTGCCCAACTAGCGCCA{}ACGGGAG",
+        "prediction": "TCGGGTTTTCATATCCAACCCCT",
+        "prompt": "CTCCCAGAGTGGTAGCAAGCACAGGTTTCACCCTCACCGCAATGTGGGGGTGCCCAACTAGCGCCAAGGTTACGGGAG"
+    },
+    {
+        "known_id": 84,
+        "subject": "TCTG",
+        "attribute": "CAGTG",
+        "template": "ACAGTACAAAATGGCCACTGGACTGGAGGGCGTG{}TCATTACTAAGCAGTTTTCTATCAGGAG",
+        "prediction": "CAGTGCTTTGAAAAAAACCTGACCATCTTTTTAGT",
+        "prompt": "ACAGTACAAAATGGCCACTGGACTGGAGGGCGTGTCTGTCATTACTAAGCAGTTTTCTATCAGGAG"
+    },
+    {
+        "known_id": 85,
+        "subject": "G",
+        "attribute": "ATCAGG",
+        "template": "{}CAACATCACAGCTTAGGAGTGACTATGCTCA",
+        "prediction": "ATCAGGGGAACTGTGTTTATGCTGACAGTGTAGGGACCCAACAAGCTTGAAGCATAGATCAGCAGACCA",
+        "prompt": "GCAACATCACAGCTTAGGAGTGACTATGCTCA"
+    },
+    {
+        "known_id": 86,
+        "subject": "CTAT",
+        "attribute": "AGGAAG",
+        "template": "GGTCTCCCGCGTGACAGGCGGGGATACTCACCA{}ACTAACG",
+        "prediction": "AGGAAGAGAGCTGAGCCACAGTTTGGCAAGAAGCTCCTTTAAGATTCTTTGAATGCC",
+        "prompt": "GGTCTCCCGCGTGACAGGCGGGGATACTCACCACTATACTAACG"
+    },
+    {
+        "known_id": 87,
+        "subject": "CGGGCG",
+        "attribute": "CCCACAG",
+        "template": "GCCCGCGGATGGCCGCTGG{}CCCTGGCACCG",
+        "prediction": "CCCACAGCCCTGGAAACTGCTCCCCAGGCGCGCAGGGCGCTCCCCTCGCTTGCTCTCCACCGCCT",
+        "prompt": "GCCCGCGGATGGCCGCTGGCGGGCGCCCTGGCACCG"
+    },
+    {
+        "known_id": 88,
+        "subject": "CACA",
+        "attribute": "CAG",
+        "template": "AGTGAGTCCAGGGGTAGGGCATGCTGAGGCGAGGAGGCCCTGTAG{}CAGAGTCCAGTGCAGAGAGCAGGAAAGTGCATTAGATTCTCAGGACATT",
+        "prediction": "CAG",
+        "prompt": "AGTGAGTCCAGGGGTAGGGCATGCTGAGGCGAGGAGGCCCTGTAGCACACAGAGTCCAGTGCAGAGAGCAGGAAAGTGCATTAGATTCTCAGGACATT"
+    },
+    {
+        "known_id": 89,
+        "subject": "AGGG",
+        "attribute": "AACA",
+        "template": "GGCCT{}AAAAACAACAGGAAATAGTGTCTGGGCTCCTTTGTGTAAGTTAGG",
+        "prediction": "AACATGGTGACTCAGCACTTCCTGCTGTAGGTCCACCACACCCTCTG",
+        "prompt": "GGCCTAGGGAAAAACAACAGGAAATAGTGTCTGGGCTCCTTTGTGTAAGTTAGG"
+    },
+    {
+        "known_id": 90,
+        "subject": "TCTCCTG",
+        "attribute": "A",
+        "template": "CA{}ATCAATAGCAGTGGATGCAGTCAATGCCCCAGGTGGCCTGCAGGCAGATAAGCCAGCTGGAGCAGAGGCTCAAGTTGAACTAAGAAAGATT",
+        "prediction": "A",
+        "prompt": "CATCTCCTGATCAATAGCAGTGGATGCAGTCAATGCCCCAGGTGGCCTGCAGGCAGATAAGCCAGCTGGAGCAGAGGCTCAAGTTGAACTAAGAAAGATT"
+    },
+    {
+        "known_id": 91,
+        "subject": "AT",
+        "attribute": "CAAT",
+        "template": "G{}AAGAAGACAATAAAATCTTTGGCTTGCCCATTACCAGAAG",
+        "prediction": "CAATTGGGATATCGAAGCATGCAAATTTAACTTTAATGGCAAAATGTTAGCACTGCAG",
+        "prompt": "GATAAGAAGACAATAAAATCTTTGGCTTGCCCATTACCAGAAG"
+    },
+    {
+        "known_id": 92,
+        "subject": "TCTAG",
+        "attribute": "CCCACCA",
+        "template": "TAACTAAAAGCGCTTCGCCG{}CCTGCAGCTGCACTCCCAAGATTGGAGATAGAAGTGGAAGCTCT",
+        "prediction": "CCCACCACTTGTAGGGCTGTCAGAAATTAGAC",
+        "prompt": "TAACTAAAAGCGCTTCGCCGTCTAGCCTGCAGCTGCACTCCCAAGATTGGAGATAGAAGTGGAAGCTCT"
+    },
+    {
+        "known_id": 93,
+        "subject": "ACA",
+        "attribute": "AATG",
+        "template": "CAAGTATTCCCTTCTCAATGTTCCTAGAAGGTGGAGCTAATTCTCCCTATCGGTTTTCACTGAGGCAACTAGAGTTCAG{}CAGG",
+        "prediction": "AATGCCCAGTCAGCA",
+        "prompt": "CAAGTATTCCCTTCTCAATGTTCCTAGAAGGTGGAGCTAATTCTCCCTATCGGTTTTCACTGAGGCAACTAGAGTTCAGACACAGG"
+    },
+    {
+        "known_id": 94,
+        "subject": "TAG",
+        "attribute": "CTTTT",
+        "template": "CTACCA{}TGAGGATTTGTAACTGGAGACGGTAG",
+        "prediction": "CTTTTTATAAACGCATTGTGCTGCTTTTTTACCTCAGGAACATTGCGAAGACTCAACTGGAAGATC",
+        "prompt": "CTACCATAGTGAGGATTTGTAACTGGAGACGGTAG"
+    },
+    {
+        "known_id": 95,
+        "subject": "ATGG",
+        "attribute": "CAGG",
+        "template": "ACTGCACCACAAGAGGGTACTACTGCCCGATAG{}TCTCACAGAGTGTTAG",
+        "prediction": "CAGGAATTAGAGGGCTGCTCCTGAGCATGACTGCAGTTTGCTGCTGCT",
+        "prompt": "ACTGCACCACAAGAGGGTACTACTGCCCGATAGATGGTCTCACAGAGTGTTAG"
+    },
+    {
+        "known_id": 96,
+        "subject": "TTCA",
+        "attribute": "TCTTCTG",
+        "template": "{}TTCTACAACGGCTATATATAAAATTTAGGAA",
+        "prediction": "TCTTCTGTGGCATCTAAATCAAGGTGATGCACCTACATAGATCAAGGGGATAATGCTGAGATATTA",
+        "prompt": "TTCATTCTACAACGGCTATATATAAAATTTAGGAA"
+    },
+    {
+        "known_id": 97,
+        "subject": "TGACA",
+        "attribute": "TGGTT",
+        "template": "{}",
+        "prediction": "TGGTTCTGCAGGCTAGTCCAGAGTCTGTGCGGTGCCCTCTGTGTCTTGGCTGAGGAGAGATGATAGCCAGTTCAGCTGTGCCAGGGTCTGCTAGGG",
+        "prompt": "TGACA"
+    },
+    {
+        "known_id": 98,
+        "subject": "TCAG",
+        "attribute": "CTCA",
+        "template": "AGACTAGCGGGCCTCTCCCCTGCGAGCCTAGCCTCCCGGGACAGGCA{}TCCTTGCTGAGCAGCCA",
+        "prediction": "CTCATACACAACTGCTTGCATTTGTAACCCTCT",
+        "prompt": "AGACTAGCGGGCCTCTCCCCTGCGAGCCTAGCCTCCCGGGACAGGCATCAGTCCTTGCTGAGCAGCCA"
+    },
+    {
+        "known_id": 99,
+        "subject": "CCCAGGG",
+        "attribute": "CAAA",
+        "template": "{}CTGGCCCTCTGGAGGAAAGGCAGAGCTAGCAACACACTCAG",
+        "prediction": "CAAAATCCTGGTTTCACATTTCATAACCAACACATGCCCATACCCAGATAAGC",
+        "prompt": "CCCAGGGCTGGCCCTCTGGAGGAAAGGCAGAGCTAGCAACACACTCAG"
+    },
+    {
+        "known_id": 100,
+        "subject": "CAGGG",
+        "attribute": "CGGTGG",
+        "template": "GACA{}AAAGAAG",
+        "prediction": "CGGTGGCACACACACTACCAGCATCCATTAACCCAGACAGTAGCTGTTTATAACACAAAGCACCCACATTGGAGGTTAGAGATGA",
+        "prompt": "GACACAGGGAAAGAAG"
+    },
+    {
+        "known_id": 101,
+        "subject": "TGCCA",
+        "attribute": "TTTT",
+        "template": "ACTTATCATAAGCTTCTTTCCTTATTTATTCCTTCACAAGTTGTTGG{}TAGTGGGAAAG",
+        "prediction": "TTTTTACAATGTGCTGACTCAGCAGGAAAACTTCAAAA",
+        "prompt": "ACTTATCATAAGCTTCTTTCCTTATTTATTCCTTCACAAGTTGTTGGTGCCATAGTGGGAAAG"
+    },
+    {
+        "known_id": 102,
+        "subject": "ATGG",
+        "attribute": "AAG",
+        "template": "GATCTGGTACCAGCCTTGACTTTTATCTCCCCACACACACCCGGTTTCCTCTGACTCAGAGATGAGGTCAGCAGAA{}CATGCCATTACCAG",
+        "prediction": "AAGCCTT",
+        "prompt": "GATCTGGTACCAGCCTTGACTTTTATCTCCCCACACACACCCGGTTTCCTCTGACTCAGAGATGAGGTCAGCAGAAATGGCATGCCATTACCAG"
+    },
+    {
+        "known_id": 103,
+        "subject": "TCAGCA",
+        "attribute": "TCCA",
+        "template": "GAGTGACTAAAATAGAGATAAATTTGAATCCCATGAATGTTGGCAAGTGCTGATCCTGTGTGTAAAACTGCTGTGG{}TTTT",
+        "prediction": "TCCACAGTCTTCCCA",
+        "prompt": "GAGTGACTAAAATAGAGATAAATTTGAATCCCATGAATGTTGGCAAGTGCTGATCCTGTGTGTAAAACTGCTGTGGTCAGCATTTT"
+    },
+    {
+        "known_id": 104,
+        "subject": "ATT",
+        "attribute": "CAGAGG",
+        "template": "{}",
+        "prediction": "CAGAGGAACATCACACCCCTTTATTTGAGCTCTCATTCTCTGTCCTAACAGATTTTGCTGAGTCACTTGCAGTGTGTGATCCAGTCAGCACTTTGAGA",
+        "prompt": "ATT"
+    },
+    {
+        "known_id": 105,
+        "subject": "AAAAAAAA",
+        "attribute": "ATGACT",
+        "template": "CAGACATGCCCAGCAGCGATGACTCAGCACTTAATACCCAGGTT{}ACAGATATACCCAGCAGCG",
+        "prediction": "ATGACTCAGCACTTAAGAGCATTTGTTGCT",
+        "prompt": "CAGACATGCCCAGCAGCGATGACTCAGCACTTAATACCCAGGTTAAAAAAAAACAGATATACCCAGCAGCG"
+    },
+    {
+        "known_id": 106,
+        "subject": "ATT",
+        "attribute": "CCG",
+        "template": "ACTTGCTCTGGGGTTTCTGCTGAGTCATGTTTCTTGATCCTTTCACTCCCA{}CCTGGGTTTATTTTGGCTCCTCC",
+        "prediction": "CCGTCTTTGCACAACCACATGTTA",
+        "prompt": "ACTTGCTCTGGGGTTTCTGCTGAGTCATGTTTCTTGATCCTTTCACTCCCAATTCCTGGGTTTATTTTGGCTCCTCC"
+    },
+    {
+        "known_id": 107,
+        "subject": "TATG",
+        "attribute": "CTG",
+        "template": "GCTAGCAGTCCCAGAATCTAGTACACTGCAAATATTCTG{}CAGTGACCTTGCTGAAGACAGTTAGCATCTCA",
+        "prediction": "CTGAATTTATCTCTGACTTGTCTGGT",
+        "prompt": "GCTAGCAGTCCCAGAATCTAGTACACTGCAAATATTCTGTATGCAGTGACCTTGCTGAAGACAGTTAGCATCTCA"
+    },
+    {
+        "known_id": 108,
+        "subject": "ACTAGG",
+        "attribute": "TCT",
+        "template": "TGTAAAATTTACCTGTTGCAAGATCCGAAGTCTGGTCTGGATCAGGATCCTTG{}CAGGCAAAAATAAG",
+        "prediction": "TCTCTAGCTTCTCTTGCTACTTCTCCTT",
+        "prompt": "TGTAAAATTTACCTGTTGCAAGATCCGAAGTCTGGTCTGGATCAGGATCCTTGACTAGGCAGGCAAAAATAAG"
+    },
+    {
+        "known_id": 109,
+        "subject": "AGGG",
+        "attribute": "CTGAG",
+        "template": "{}TGTTCTCTACTGGCCACTGCTCTCCAATGCTCCTTAAAGCA",
+        "prediction": "CTGAGCCTTCCTAGTGAGGTCACCCAATTTGTTCACACAGGCCATCTTCTGCTCTT",
+        "prompt": "AGGGTGTTCTCTACTGGCCACTGCTCTCCAATGCTCCTTAAAGCA"
+    },
+    {
+        "known_id": 110,
+        "subject": "TAACA",
+        "attribute": "CCTCTT",
+        "template": "AAAAAAGCTAAAAGGTAAATCCAAGAAACCTGCTGAGTCAGCAGAAATCTCTGAAGACCACACCAATG{}CTCT",
+        "prediction": "CCTCTTATCTTTTGTCAGTCAGGG",
+        "prompt": "AAAAAAGCTAAAAGGTAAATCCAAGAAACCTGCTGAGTCAGCAGAAATCTCTGAAGACCACACCAATGTAACACTCT"
+    },
+    {
+        "known_id": 111,
+        "subject": "TT",
+        "attribute": "CAGTCA",
+        "template": "GCTTACAGATGAGCATGATCAGCAACAGTACAGATCACTACTCTTGG{}AGAACATCACAGGTATGAGCG",
+        "prediction": "CAGTCAACTGTCCCGCAGTGAAGATTGCTTG",
+        "prompt": "GCTTACAGATGAGCATGATCAGCAACAGTACAGATCACTACTCTTGGTTAGAACATCACAGGTATGAGCG"
+    },
+    {
+        "known_id": 112,
+        "subject": "ATAAG",
+        "attribute": "TGAG",
+        "template": "CCG{}TGATTGCACAGGGCATGTCATTTGTGTTCCCCAGAATCTGCTGAG",
+        "prediction": "TGAGCTGGGTGATGACTCAGGGTTTTATAATACAATAGTGGGCTGTAT",
+        "prompt": "CCGATAAGTGATTGCACAGGGCATGTCATTTGTGTTCCCCAGAATCTGCTGAG"
+    },
+    {
+        "known_id": 113,
+        "subject": "ACAATT",
+        "attribute": "CTCA",
+        "template": "TCATTTTCCATGTTCCTCATTGTAACTCATTGATATACACTGTTCT{}CCCGTTTCCAACGAATGTGTTTTTCAGTGTAACTCA",
+        "prediction": "CTCATCTAATATG",
+        "prompt": "TCATTTTCCATGTTCCTCATTGTAACTCATTGATATACACTGTTCTACAATTCCCGTTTCCAACGAATGTGTTTTTCAGTGTAACTCA"
+    },
+    {
+        "known_id": 114,
+        "subject": "AGCACCA",
+        "attribute": "ACATT",
+        "template": "TGGACTCTCAGTCTGCCCACATCAGCGGCTGTGAAGCCAGTAGCAG{}CCTGAGGCGCCTCACAAGCAG",
+        "prediction": "ACATTAGGAGCCTGGTCAGCCTCTGCC",
+        "prompt": "TGGACTCTCAGTCTGCCCACATCAGCGGCTGTGAAGCCAGTAGCAGAGCACCACCTGAGGCGCCTCACAAGCAG"
+    },
+    {
+        "known_id": 115,
+        "subject": "CAAAG",
+        "attribute": "CTGGG",
+        "template": "{}TGAGGATTTCCTTATTGGGG",
+        "prediction": "CTGGGATGGGGCTAAATGCTGAGTCAGCAAATAGAGAGCTTGAGGGTGGGGGGTGGGTTATCCTCATGACTGGAAA",
+        "prompt": "CAAAGTGAGGATTTCCTTATTGGGG"
+    },
+    {
+        "known_id": 116,
+        "subject": "CTTTG",
+        "attribute": "ATCG",
+        "template": "TCTAGTGTGGGGGCATCCGCCGTATTTCCACCTT{}AAGTATTAGCTCGGTTAGGGGCAATCCCATTTCTCTGGCCTGGTCGCAGTTCAGCGAA",
+        "prediction": "ATCG",
+        "prompt": "TCTAGTGTGGGGGCATCCGCCGTATTTCCACCTTCTTTGAAGTATTAGCTCGGTTAGGGGCAATCCCATTTCTCTGGCCTGGTCGCAGTTCAGCGAA"
+    },
+    {
+        "known_id": 117,
+        "subject": "TTGAG",
+        "attribute": "AAGCA",
+        "template": "{}TGTACCATCAGACAGCCAAG",
+        "prediction": "AAGCAAAGAAAAGGAGGAGTCCTTCTTCTTCAAGCAGCAGCAAAGACCAAAGTGACAGGCAGAGTCTTTAGCTAAC",
+        "prompt": "TTGAGTGTACCATCAGACAGCCAAG"
+    },
+    {
+        "known_id": 118,
+        "subject": "ACTGTTG",
+        "attribute": "CTGAA",
+        "template": "TGAAGTTTACTGCACACTACAGCAGGTTATTG{}",
+        "prediction": "CTGAATCTGAACGTCTGATCAGCTGGAGGTGAGACAAACCTGAAAAAGAGGCGAATGTGCCA",
+        "prompt": "TGAAGTTTACTGCACACTACAGCAGGTTATTGACTGTTG"
+    },
+    {
+        "known_id": 119,
+        "subject": "ACT",
+        "attribute": "CAGCA",
+        "template": "TAGTAGGGCAGGGAGCTCTGCCTGTCATCCACCCAGAGAAATGCTG{}",
+        "prediction": "CAGCAAAGGCACACTGCCTGCGAGGCCTTTATGAGACTCCAGGAGTCAGTTC",
+        "prompt": "TAGTAGGGCAGGGAGCTCTGCCTGTCATCCACCCAGAGAAATGCTGACT"
+    },
+    {
+        "known_id": 120,
+        "subject": "TGTT",
+        "attribute": "ACCAGG",
+        "template": "GGACGTTTTGAAACCTGACGTGACTT{}TCCTTCCCTCCATAACTACACAGAACATGCCAACTCAGCACAAAAAAAGG",
+        "prediction": "ACCAGGCCTTTCCCTCCACGT",
+        "prompt": "GGACGTTTTGAAACCTGACGTGACTTTGTTTCCTTCCCTCCATAACTACACAGAACATGCCAACTCAGCACAAAAAAAGG"
+    },
+    {
+        "known_id": 121,
+        "subject": "TAGGAG",
+        "attribute": "TCTTCA",
+        "template": "TATCTGAAGAGAG{}TAGGATTCAAAAAACAGTGACTAGGCACTTGCATATCTATCTGTGCAATACATCATTGCTCTCATG",
+        "prediction": "TCTTCACTGGTCTCCA",
+        "prompt": "TATCTGAAGAGAGTAGGAGTAGGATTCAAAAAACAGTGACTAGGCACTTGCATATCTATCTGTGCAATACATCATTGCTCTCATG"
+    },
+    {
+        "known_id": 122,
+        "subject": "GG",
+        "attribute": "CCAGGTG",
+        "template": "{}AGAA",
+        "prediction": "CCAGGTGCCAGGGGCACCCTCTGCTCTCTGCCAAAAGGGTTAGGAAGCAAGACCCCTCTTCGTCTCCTGAACGGCAAAGGCTGCCCAAGGTGTGC",
+        "prompt": "GGAGAA"
+    },
+    {
+        "known_id": 123,
+        "subject": "G",
+        "attribute": "CCAG",
+        "template": "{}TTAACAAAGCCCATTTGTCCTGTTTCAACTGCTGGAAAGG",
+        "prediction": "CCAGATAAAAATAGAAGCAGCACAACCAAAATTGAAACAGCCTGGAAAAGTCTGAGTCAC",
+        "prompt": "GTTAACAAAGCCCATTTGTCCTGTTTCAACTGCTGGAAAGG"
+    },
+    {
+        "known_id": 124,
+        "subject": "ATACA",
+        "attribute": "CAGTCA",
+        "template": "TCACTGCACAGATACT{}CAGTCACTGTGTAGACATTATGCA",
+        "prediction": "CAGTCACTATGCACAGTGACTATACACAGACATTATGCACAGTCACTATGCAAAGT",
+        "prompt": "TCACTGCACAGATACTATACACAGTCACTGTGTAGACATTATGCA"
+    },
+    {
+        "known_id": 125,
+        "subject": "ACGAG",
+        "attribute": "CCATTG",
+        "template": "CAAAATGGG{}",
+        "prediction": "CCATTGAAAGCTCTTAGCAGCACAGACTAGATCTGAAGTTTTTTAGCACATATGCCTCAGGCTTGGCTCGTGATGAAATGATTCTCA",
+        "prompt": "CAAAATGGGACGAG"
+    },
+    {
+        "known_id": 126,
+        "subject": "TAAGGG",
+        "attribute": "CACA",
+        "template": "{}",
+        "prediction": "CACACATTAAGCTAAAAAGCAAAGTCACAGGAAAAGAAATTCCAAGCAGATAACCAACCACAAAGACAAGTGGGAGATATGGTATGATTCAGCAA",
+        "prompt": "TAAGGG"
+    },
+    {
+        "known_id": 127,
+        "subject": "AT",
+        "attribute": "AATTTTG",
+        "template": "CTCATGATAATCT{}AAGAAGAGCATTTTGGGACAAAATATCTT",
+        "prediction": "AATTTTGTGTGCAAGGAATGCAGTTGCTCCAAAATTCACTTTATCAAACTGTAACTT",
+        "prompt": "CTCATGATAATCTATAAGAAGAGCATTTTGGGACAAAATATCTT"
+    },
+    {
+        "known_id": 128,
+        "subject": "GGG",
+        "attribute": "TGCTTGG",
+        "template": "{}TGCAGGATGAGACTCATCTCACTGCCAG",
+        "prediction": "TGCTTGGAAAATGTCAGTGGGTCAGTCTCTTGGTGCTGCTGACTGTTGGGAAGAACTTCCCAGGTGTGTC",
+        "prompt": "GGGTGCAGGATGAGACTCATCTCACTGCCAG"
+    },
+    {
+        "known_id": 129,
+        "subject": "CTTCA",
+        "attribute": "AGGG",
+        "template": "GTCCGCTGACTAGTCTGCATTG{}TAG",
+        "prediction": "AGGGCTGTTTAGCTGATGAGAGATTGCAGATGGGGGGCACACTGTAGTGTGGCTGCATTCAACCTAAATCA",
+        "prompt": "GTCCGCTGACTAGTCTGCATTGCTTCATAG"
+    },
+    {
+        "known_id": 130,
+        "subject": "ATAGAG",
+        "attribute": "ACTTGG",
+        "template": "{}ATTACAGGGCTTTGCTCTCCTCTTG",
+        "prediction": "ACTTGGCAAAAGACCAACAGTCTTAAGAATGAAGCTTTCTATTTTGTCAGTTGGGCTCAGCAAGCTGTAC",
+        "prompt": "ATAGAGATTACAGGGCTTTGCTCTCCTCTTG"
+    },
+    {
+        "known_id": 131,
+        "subject": "CTCAG",
+        "attribute": "TAACAG",
+        "template": "TTTGGAATTTACCCAAAGTTTGTCGAAGACTAGCTCTCTGAGAGGGGCAAGCAGCTCTTGGCGCAGGTCTCAAAGCGCCTTGACG{}TGTCG",
+        "prediction": "TAACAG",
+        "prompt": "TTTGGAATTTACCCAAAGTTTGTCGAAGACTAGCTCTCTGAGAGGGGCAAGCAGCTCTTGGCGCAGGTCTCAAAGCGCCTTGACGCTCAGTGTCG"
+    },
+    {
+        "known_id": 132,
+        "subject": "G",
+        "attribute": "TAGGTG",
+        "template": "{}CTACCTTCTCTGATCCTCTCGTCAGTGGGCTTGCTGCCTGGACCTGCCTATCCATGTGTGCTTGCTGCTT",
+        "prediction": "TAGGTGATTGTGCCATCTTGCTCAGACAGC",
+        "prompt": "GCTACCTTCTCTGATCCTCTCGTCAGTGGGCTTGCTGCCTGGACCTGCCTATCCATGTGTGCTTGCTGCTT"
+    },
+    {
+        "known_id": 133,
+        "subject": "TCTTGTT",
+        "attribute": "ACCAG",
+        "template": "ATAA{}TCAGAGTCATAT",
+        "prediction": "ACCAGTTTTAGCTTGTCTCAGCATTTCTCCTAATACAGTTACTTAGCGCCACCTATTGGCCGACTAGTTAATAAAGAA",
+        "prompt": "ATAATCTTGTTTCAGAGTCATAT"
+    },
+    {
+        "known_id": 134,
+        "subject": "TTGGGG",
+        "attribute": "TGGCTG",
+        "template": "GGTGTGGG{}AGTGGTGG",
+        "prediction": "TGGCTGTGGTTCCCTGAAAGAGCAGCCAGCACTCTGCTGAGTCATCTCTTCAGCTTCAGCCCTATCTCTCCTTTTTTTT",
+        "prompt": "GGTGTGGGTTGGGGAGTGGTGG"
+    },
+    {
+        "known_id": 135,
+        "subject": "CAAGG",
+        "attribute": "TCCA",
+        "template": "AATTTTAACGTGAGTATTCGGATTTTCAAACCACCA{}CAAATATATCTTGCTGCTGACTCAGCATTTTTGGTG",
+        "prediction": "TCCATTTTATAACTTCTAGGTCCT",
+        "prompt": "AATTTTAACGTGAGTATTCGGATTTTCAAACCACCACAAGGCAAATATATCTTGCTGCTGACTCAGCATTTTTGGTG"
+    },
+    {
+        "known_id": 136,
+        "subject": "CCAGCTG",
+        "attribute": "ACT",
+        "template": "TGAGCTCAGTAGAACAGCTCT{}TCCAATCAATAGGTTTTGGTT",
+        "prediction": "ACTCAAACACCTTCATGCACTGCTTACTCCTCCAGCACAAGTCCAAATGTGA",
+        "prompt": "TGAGCTCAGTAGAACAGCTCTCCAGCTGTCCAATCAATAGGTTTTGGTT"
+    },
+    {
+        "known_id": 137,
+        "subject": "TGAA",
+        "attribute": "TACATG",
+        "template": "CACAGTGAGTTCTGGGAGGCTCTATCAG{}TGAGTTCCCA",
+        "prediction": "TACATGTAATGCGGGAATAGATGAATAGGCCTATGGCCATGTGTGTTTTTGTTGGCACT",
+        "prompt": "CACAGTGAGTTCTGGGAGGCTCTATCAGTGAATGAGTTCCCA"
+    },
+    {
+        "known_id": 138,
+        "subject": "AG",
+        "attribute": "CTGGGCG",
+        "template": "{}",
+        "prediction": "CTGGGCGTGGCCTGCGGGAAGCGGCTTCCTAAACTCCTACAAAGCCAAGCTGATGCTGACTCAGTAATCCTTTTTGCAAGGTTCCTGTTTCTGTCCAGC",
+        "prompt": "AG"
+    },
+    {
+        "known_id": 139,
+        "subject": "TTTGATG",
+        "attribute": "ACTGCG",
+        "template": "GAGTCAGCTG{}ATAGCA",
+        "prediction": "ACTGCGTTAACTCAGCTAACTCGGTAGTGACACCAAAGGGACCGGGGACCATTTGCCAAGGCCACAGAACCTCAGAAG",
+        "prompt": "GAGTCAGCTGTTTGATGATAGCA"
+    },
+    {
+        "known_id": 140,
+        "subject": "ACTG",
+        "attribute": "AGCA",
+        "template": "ATCAAGAGCGCATGCTGCAATCATTGTCAAATATCATCCCAGGTG{}CTAAGGAACTTCTGACGTTAAAGATATTCGACATCTGAGTTCG",
+        "prediction": "AGCATCTTT",
+        "prompt": "ATCAAGAGCGCATGCTGCAATCATTGTCAAATATCATCCCAGGTGACTGCTAAGGAACTTCTGACGTTAAAGATATTCGACATCTGAGTTCG"
+    },
+    {
+        "known_id": 141,
+        "subject": "G",
+        "attribute": "CCA",
+        "template": "{}",
+        "prediction": "CCATTGGAATATGCGCTCTTGGCTTTGCACAGTGACATTGCTGATGTGAGGCAAAGGAGCATTTGACTACCTGCAGAACAACACATAAGAGTAAGCTCTT",
+        "prompt": "G"
+    },
+    {
+        "known_id": 142,
+        "subject": "TCTT",
+        "attribute": "ACGG",
+        "template": "AAATGTCAAAGCAGCGGGAGAACAATAATGAAGAGTTGCTCAGTTTTCAGCACTCTGCATAGTG{}",
+        "prediction": "ACGGCCCCTGGAGTAGAGTGTGGGCATTAAGAA",
+        "prompt": "AAATGTCAAAGCAGCGGGAGAACAATAATGAAGAGTTGCTCAGTTTTCAGCACTCTGCATAGTGTCTT"
+    },
+    {
+        "known_id": 143,
+        "subject": "G",
+        "attribute": "AAGAATT",
+        "template": "{}TCCAATCCAG",
+        "prediction": "AAGAATTCCTGCCTGCCTTGCCCATCCATTGGAGCAGAAACTGTGCTAGTAGTGGAGTGTGGAGCTGCAAAGCATGGTGTGCATCCTCTC",
+        "prompt": "GTCCAATCCAG"
+    },
+    {
+        "known_id": 144,
+        "subject": "CCATT",
+        "attribute": "CATT",
+        "template": "ACAGACAAGGTCATTCCCAGCAAAGCAAGAATGCAATCAGCTGGACATGCATCCAGTAT{}CCAAGACCGAATCTGCAAGTGGTTTT",
+        "prediction": "CATTCAGTTCA",
+        "prompt": "ACAGACAAGGTCATTCCCAGCAAAGCAAGAATGCAATCAGCTGGACATGCATCCAGTATCCATTCCAAGACCGAATCTGCAAGTGGTTTT"
+    },
+    {
+        "known_id": 145,
+        "subject": "TACC",
+        "attribute": "TAT",
+        "template": "ATATTCGCTTTGGAAAGAGCACAGATTCTGACTGCAGCCTAAAGCAAGGG{}TACAGCTTTAA",
+        "prediction": "TATACCCTTGTGAATGAAAAGCTTAGTTGGGAAATG",
+        "prompt": "ATATTCGCTTTGGAAAGAGCACAGATTCTGACTGCAGCCTAAAGCAAGGGTACCTACAGCTTTAA"
+    },
+    {
+        "known_id": 146,
+        "subject": "CTAG",
+        "attribute": "AAGCG",
+        "template": "GAAACAAATGAGCTCTCCCG{}ACTCCAGAGCGACACTG",
+        "prediction": "AAGCGCCGCTCTTTCCTGACAAGGCTATTGTGACAGGCGCGGTCCTACCTGTGGTCCAGC",
+        "prompt": "GAAACAAATGAGCTCTCCCGCTAGACTCCAGAGCGACACTG"
+    },
+    {
+        "known_id": 147,
+        "subject": "CCAAA",
+        "attribute": "TTAA",
+        "template": "TGTTAATT{}TAGCGTGGAAGTCTTATTTTAGATGTAGTTCCAGCCCACCA",
+        "prediction": "TTAATTTGTCTAGTCAGCAATTTTTCATGAGTCCCTTGTTTGTGGGG",
+        "prompt": "TGTTAATTCCAAATAGCGTGGAAGTCTTATTTTAGATGTAGTTCCAGCCCACCA"
+    },
+    {
+        "known_id": 148,
+        "subject": "AGAA",
+        "attribute": "TCACA",
+        "template": "TTTTTCTTACCAG{}",
+        "prediction": "TCACATACCTAAGTCCCCTGGCAATCACTCCATAAGATCATAAATGCGCCAGGCGAAAAGTGCAAACACTTGTTCAATTTCCAC",
+        "prompt": "TTTTTCTTACCAGAGAA"
+    },
+    {
+        "known_id": 149,
+        "subject": "AA",
+        "attribute": "CCTGCAG",
+        "template": "{}TAGTGACAGTAATAGGGTGTGACACGGCATAACTG",
+        "prediction": "CCTGCAGATAAGAGGGGCTTCCTGTAACTGCTGAGTCACCACCTTGGCTACTGAATACTTGCAC",
+        "prompt": "AATAGTGACAGTAATAGGGTGTGACACGGCATAACTG"
+    },
+    {
+        "known_id": 150,
+        "subject": "CCAG",
+        "attribute": "CTCTG",
+        "template": "AGAAATG{}",
+        "prediction": "CTCTGAAGGCTCCTCGAGCTCCCTCTAGCTCTTTCTGAAAAGTAAAGCAGCAGACCAGTGCACCAACCTTTCTTCTTGTCTATTTGTCAT",
+        "prompt": "AGAAATGCCAG"
+    },
+    {
+        "known_id": 151,
+        "subject": "CCACCTG",
+        "attribute": "CCACG",
+        "template": "CAGGCTGGCCTCGAACTCAGAAAT{}ACTCTGCCTCCAAAGTGCTGGGATTACAGGTGTGAGCCA",
+        "prediction": "CCACGCCCTGCCTGGTGTCTTTTTAAAAACG",
+        "prompt": "CAGGCTGGCCTCGAACTCAGAAATCCACCTGACTCTGCCTCCAAAGTGCTGGGATTACAGGTGTGAGCCA"
+    },
+    {
+        "known_id": 152,
+        "subject": "ATCT",
+        "attribute": "ATCAG",
+        "template": "TTTTTTGCAATTCCGAGAAAAATTCAACTG{}CTTTGCAAGAGATGAG",
+        "prediction": "ATCAGCTATTGTGGTCTAGTCTTTGGATAGCTACTGTGAACCAGCCTAAAA",
+        "prompt": "TTTTTTGCAATTCCGAGAAAAATTCAACTGATCTCTTTGCAAGAGATGAG"
+    },
+    {
+        "known_id": 153,
+        "subject": "CCAG",
+        "attribute": "ATAG",
+        "template": "CGGGGGCG{}CTAAGAATTTCA",
+        "prediction": "ATAGACCTTTATGATGACAGGAGAACCAGCTACACATCGGCTCGTTGGTCTAGGGGTATGATTCTCGCTTAGGGTGC",
+        "prompt": "CGGGGGCGCCAGCTAAGAATTTCA"
+    },
+    {
+        "known_id": 154,
+        "subject": "CTGACT",
+        "attribute": "CAGTT",
+        "template": "AAACCTTG{}AAGGGTTCTGTTTG",
+        "prediction": "CAGTTAAGAATAAGTTCTTGGGGGCTGGCCAGATGGCTCAGCGGTTAAGAGCACTGACTGCTCTTCCTGAGGT",
+        "prompt": "AAACCTTGCTGACTAAGGGTTCTGTTTG"
+    },
+    {
+        "known_id": 155,
+        "subject": "CTCTGG",
+        "attribute": "TGGTCA",
+        "template": "AGACCCTCTTATATTGTTG{}CTTG",
+        "prediction": "TGGTCATTTGCAATGTGGTTACTCCTAGCTTCAATGAGCCCTCAAGAGTTTGCCTATAGACGGAAACAAGCG",
+        "prompt": "AGACCCTCTTATATTGTTGCTCTGGCTTG"
+    },
+    {
+        "known_id": 156,
+        "subject": "G",
+        "attribute": "ACCG",
+        "template": "{}AGGGAGGCAACTTTGGCGTTCAGATTTCCAAACAAGACTATGCTAGGTTCTGTACAGGGGGGAAGCTCTGAGG",
+        "prediction": "ACCGTTGAGACACCTTACATTGGCTCA",
+        "prompt": "GAGGGAGGCAACTTTGGCGTTCAGATTTCCAAACAAGACTATGCTAGGTTCTGTACAGGGGGGAAGCTCTGAGG"
+    },
+    {
+        "known_id": 157,
+        "subject": "ACTCTGG",
+        "attribute": "TCATCA",
+        "template": "AG{}CAGCAGGAGCTGCTGGAAG",
+        "prediction": "TCATCACCATAGCCCAGGTAATCAGGGTGACTGCACTGGAATCCCATGTCAATGTGAGATCTCAAGCAGCTTC",
+        "prompt": "AGACTCTGGCAGCAGGAGCTGCTGGAAG"
+    },
+    {
+        "known_id": 158,
+        "subject": "AGAA",
+        "attribute": "CCCCCA",
+        "template": "ATGTCACCATGACTTGTACA{}TGGGTTGGAGAGATGACTCAGCAGTTAGCAGCACTCAGGCTCAAGTCCCAGCA",
+        "prediction": "CCCCCAACTGTCTGTAACTTTAGC",
+        "prompt": "ATGTCACCATGACTTGTACAAGAATGGGTTGGAGAGATGACTCAGCAGTTAGCAGCACTCAGGCTCAAGTCCCAGCA"
+    },
+    {
+        "known_id": 159,
+        "subject": "CGAG",
+        "attribute": "TAACA",
+        "template": "ATTACTGAAAAACGTGAAAAATGAGAAATGCACACTGCAGGACCTGGAATATGG{}AAAACTGAACATCACGGAAAATGAGAA",
+        "prediction": "TAACACTCTTTAGGTA",
+        "prompt": "ATTACTGAAAAACGTGAAAAATGAGAAATGCACACTGCAGGACCTGGAATATGGCGAGAAAACTGAACATCACGGAAAATGAGAA"
+    },
+    {
+        "known_id": 160,
+        "subject": "AAGG",
+        "attribute": "CACA",
+        "template": "{}CCGGGCTGGCCACAGGGTGGAGGGATCTATG",
+        "prediction": "CACACTTGATACAGGCTTTTCCTGCTGTTTTCTGCTGAGTCAGCATTCCAAGGAAGCCTCCTGAAG",
+        "prompt": "AAGGCCGGGCTGGCCACAGGGTGGAGGGATCTATG"
+    },
+    {
+        "known_id": 161,
+        "subject": "TAA",
+        "attribute": "TCATG",
+        "template": "{}AGGGAAAACATATAACAGACTACAACACTTTATTATCAACTTTTCAACCTCATCACTAACCTTGAGGG",
+        "prediction": "TCATGACACCAGTGCTGAGTCAGCACTTTT",
+        "prompt": "TAAAGGGAAAACATATAACAGACTACAACACTTTATTATCAACTTTTCAACCTCATCACTAACCTTGAGGG"
+    },
+    {
+        "known_id": 162,
+        "subject": "TG",
+        "attribute": "CCTCCTCG",
+        "template": "{}ACAGACCTG",
+        "prediction": "CCTCCTCGACAACACTGTTCCATCCCTAGCATTCCATGGATCCTAAGCCAGAGTCCCTTTGTGCCAGGAACAGGCTCCAGAACACCCAAC",
+        "prompt": "TGACAGACCTG"
+    },
+    {
+        "known_id": 163,
+        "subject": "CTACA",
+        "attribute": "TGGATT",
+        "template": "TGTCCCTCTTTTTGACT{}TTTGTCAATCA",
+        "prediction": "TGGATTCCTGCTGACTCATCATTCTGTAGCTTTGGAATGCAAGTTCTTCTCATGGCCCCTTCTGCTGT",
+        "prompt": "TGTCCCTCTTTTTGACTCTACATTTGTCAATCA"
+    },
+    {
+        "known_id": 164,
+        "subject": "TCG",
+        "attribute": "TGTT",
+        "template": "CATTTCTGTCACGTTCACCCAGTCAATTTTCTTTG{}TATTTCTCCTTTGTAGTTCTTG",
+        "prediction": "TGTTAATTTAATATCCCTACTTTTTCCTATGTGAGCCAGCG",
+        "prompt": "CATTTCTGTCACGTTCACCCAGTCAATTTTCTTTGTCGTATTTCTCCTTTGTAGTTCTTG"
+    },
+    {
+        "known_id": 165,
+        "subject": "CCTAG",
+        "attribute": "CCCCAGG",
+        "template": "GTCCTTTTCA{}TGCCAACTGGGTTACCGG",
+        "prediction": "CCCCAGGTGCCTTGATACAAGACAGTGTTTAAGCGAAAGCGAATTCAGCAGCATGGCTCCAAGTCGTT",
+        "prompt": "GTCCTTTTCACCTAGTGCCAACTGGGTTACCGG"
+    },
+    {
+        "known_id": 166,
+        "subject": "TATT",
+        "attribute": "TTCAACA",
+        "template": "CTTTACCTGGGGCTGGGTGTCCATGCTCGGCTTCTTGTGCTGACTCAGCATCTCCCTCGCCCACAGCAGAGCTTTTCTTTTGTT{}",
+        "prediction": "TTCAACATACTGA",
+        "prompt": "CTTTACCTGGGGCTGGGTGTCCATGCTCGGCTTCTTGTGCTGACTCAGCATCTCCCTCGCCCACAGCAGAGCTTTTCTTTTGTTTATT"
+    },
+    {
+        "known_id": 167,
+        "subject": "G",
+        "attribute": "CTG",
+        "template": "{}CG",
+        "prediction": "CTGATATTTCAGCAGGCTGCTGCTGTTAACCAAGTGATGAGGAGTTTGAGGAGCATTGACTTGTTTTGCTCTAAAGCCTGCTTAACAATGAGAGGCAA",
+        "prompt": "GCG"
+    },
+    {
+        "known_id": 168,
+        "subject": "AGAG",
+        "attribute": "TGG",
+        "template": "{}ATCAGGCTTTCACTCACTTTGCAGAGTAGAA",
+        "prediction": "TGGCAGAAGATGACCAGCACTGGGCTCTACTGAGCACAGCAATCGCCCTTTTGGATAGGGCTGAAG",
+        "prompt": "AGAGATCAGGCTTTCACTCACTTTGCAGAGTAGAA"
+    },
+    {
+        "known_id": 169,
+        "subject": "G",
+        "attribute": "AATGAG",
+        "template": "{}",
+        "prediction": "AATGAGTTTTCCTCATGGCTCTCTACCCTGTTGTTTTTTGTCTTAGGGTTGTTCACTTTCAGCAGTCCTGGTGGTGCTTACACAAAGTGCCGTAGATGTG",
+        "prompt": "G"
+    },
+    {
+        "known_id": 170,
+        "subject": "CA",
+        "attribute": "TCA",
+        "template": "AAGGCCTCCTTCTTACACCCTGG{}CTCTGTGAGTCACCAGGCTTTTGGGAGAATGCCAAGG",
+        "prediction": "TCATCATGACACAGCAAGAATCTTACCAGCTCAAGGGAG",
+        "prompt": "AAGGCCTCCTTCTTACACCCTGGCACTCTGTGAGTCACCAGGCTTTTGGGAGAATGCCAAGG"
+    },
+    {
+        "known_id": 171,
+        "subject": "AAAAAAAA",
+        "attribute": "CTGG",
+        "template": "TAAAGTTAAAAAAAA{}AAAAAAAGGAAGAGGG",
+        "prediction": "CTGGAGTGACTCAGCAGTTAGAAGAGGGCTGGAGTGACTCAGCAGTTAGTTAGGAGCACTCA",
+        "prompt": "TAAAGTTAAAAAAAAAAAAAAAAAAAAAAAGGAAGAGGG"
+    },
+    {
+        "known_id": 172,
+        "subject": "ACACCA",
+        "attribute": "ACGGTG",
+        "template": "GGGTCTCACACCCAGTT{}",
+        "prediction": "ACGGTGTACGGTTTTCTGCCTTGCAGTTGAGCTGCTGAGTCAGCAGAGATTCTGGGAGTGGCGAGGGGCAGGGTTTGG",
+        "prompt": "GGGTCTCACACCCAGTTACACCA"
+    },
+    {
+        "known_id": 173,
+        "subject": "TTCT",
+        "attribute": "TGATG",
+        "template": "TATAGTGCCCTCATTAAGATAGG{}AGCACGGTCTCGCAGCAGACTAGCTGTAAG",
+        "prediction": "TGATGAGAGCAGGCTTGAACTTAATCATTCAACCTGACAAAGCA",
+        "prompt": "TATAGTGCCCTCATTAAGATAGGTTCTAGCACGGTCTCGCAGCAGACTAGCTGTAAG"
+    },
+    {
+        "known_id": 174,
+        "subject": "CCCA",
+        "attribute": "CTCAG",
+        "template": "ACAGGAAGTAGCAAGAGTGAGCCAGAGCCACAGCTGGGGCAAGTCCAGAGCCAGAGCTGGGGGCA{}ACTGTGCAGATAGGCGTTGATTGGTTG",
+        "prediction": "CTCAG",
+        "prompt": "ACAGGAAGTAGCAAGAGTGAGCCAGAGCCACAGCTGGGGCAAGTCCAGAGCCAGAGCTGGGGGCACCCAACTGTGCAGATAGGCGTTGATTGGTTG"
+    },
+    {
+        "known_id": 175,
+        "subject": "TT",
+        "attribute": "TGTTG",
+        "template": "GCAGGGG{}CTAG",
+        "prediction": "TGTTGCATCCTGTTCAGAGCCATTGGTGTCCTGCAGGCCTACCCAGCTTTTTAAGGAAGACCACCCCTTGCACCACCTTAGTTCTGGC",
+        "prompt": "GCAGGGGTTCTAG"
+    },
+    {
+        "known_id": 176,
+        "subject": "TGAG",
+        "attribute": "CCTCC",
+        "template": "CAG{}TGCTT",
+        "prediction": "CCTCCCTCAGGAGGAAGGAGAGTGCTGACTCAGGAAGGCTGTCCTCTGCACCCAAGGCACAGCACATGGGTGACAATACGCATATCCAT",
+        "prompt": "CAGTGAGTGCTT"
+    },
+    {
+        "known_id": 177,
+        "subject": "CA",
+        "attribute": "AGGGTGG",
+        "template": "{}ACAAGTCAAGCACGGGCGCAACAGACAGAACTCACTAAGTTATGATCACATTGATACAGTATCTTTGCTTGAATGCAAACATGTGTT",
+        "prediction": "AGGGTGGATAAT",
+        "prompt": "CAACAAGTCAAGCACGGGCGCAACAGACAGAACTCACTAAGTTATGATCACATTGATACAGTATCTTTGCTTGAATGCAAACATGTGTT"
+    },
+    {
+        "known_id": 178,
+        "subject": "AATG",
+        "attribute": "CCCACA",
+        "template": "{}AGTGTACAAATGTCTG",
+        "prediction": "CCCACACTCATTTCTGGGCATGCTCCCGCAACTGGAATTGCTGAGTCATTTCCTCATTGGTATTTCTTCAAAGGATTATGG",
+        "prompt": "AATGAGTGTACAAATGTCTG"
+    },
+    {
+        "known_id": 179,
+        "subject": "TACA",
+        "attribute": "TCAATG",
+        "template": "AATCATTCCTTGTAATT{}ATATAAGTTACTTACATTGCTTTT",
+        "prediction": "TCAATGTAGCCTTTTTTGCCTTTCATTTAATCGAAGAGAAGCTTTTAACAATGTCT",
+        "prompt": "AATCATTCCTTGTAATTTACAATATAAGTTACTTACATTGCTTTT"
+    },
+    {
+        "known_id": 180,
+        "subject": "CTTTGTG",
+        "attribute": "CCCT",
+        "template": "GTTAGCCTGGGGCCTATAAGCTGAGTCAGCTATGAGGGTGGAGATAGCAAGAATGTAGGAGAACTAGTTATTGGAAGAA{}AAGTAGCATGG",
+        "prediction": "CCCT",
+        "prompt": "GTTAGCCTGGGGCCTATAAGCTGAGTCAGCTATGAGGGTGGAGATAGCAAGAATGTAGGAGAACTAGTTATTGGAAGAACTTTGTGAAGTAGCATGG"
+    },
+    {
+        "known_id": 181,
+        "subject": "CCTACG",
+        "attribute": "ATCCCG",
+        "template": "AATACCCTTTCCACACTTCACTAATGAAACATTCCTGTGAGTGGAGCACTGGCTCTGCTGGCGAATCTGGGCCACGCCCA{}CCCCAGG",
+        "prediction": "ATCCCGCC",
+        "prompt": "AATACCCTTTCCACACTTCACTAATGAAACATTCCTGTGAGTGGAGCACTGGCTCTGCTGGCGAATCTGGGCCACGCCCACCTACGCCCCAGG"
+    },
+    {
+        "known_id": 182,
+        "subject": "CAGAG",
+        "attribute": "T",
+        "template": "AGCAGGGGTGGCATGACCTAG{}ACATCCAGGCTTCAGCTGAGTCAGCATGAGTCAGCAGGAAAACCAGGACCACCAGGGGACACCAGGAGGAGTTG",
+        "prediction": "T",
+        "prompt": "AGCAGGGGTGGCATGACCTAGCAGAGACATCCAGGCTTCAGCTGAGTCAGCATGAGTCAGCAGGAAAACCAGGACCACCAGGGGACACCAGGAGGAGTTG"
+    },
+    {
+        "known_id": 183,
+        "subject": "AAAT",
+        "attribute": "CATG",
+        "template": "TGGTGTTGCTTGCTACCAAGGAGTTCTTGACCAGCTACTGAGAGAGGCCAGCAGGTCTCTCTTCCCTCCCTCTTGG{}CTGTAA",
+        "prediction": "CATGCTAGCTGCAGA",
+        "prompt": "TGGTGTTGCTTGCTACCAAGGAGTTCTTGACCAGCTACTGAGAGAGGCCAGCAGGTCTCTCTTCCCTCCCTCTTGGAAATCTGTAA"
+    },
+    {
+        "known_id": 184,
+        "subject": "G",
+        "attribute": "ACCTT",
+        "template": "{}AAAAGGAACAATGAATGAGAAACAAAATGAACCTTTGCCGAAACCCGGGATTGAACCAGGG",
+        "prediction": "ACCTTTAGATCTTCAGTCTAACGCTCTCCCAACTGAGCT",
+        "prompt": "GAAAAGGAACAATGAATGAGAAACAAAATGAACCTTTGCCGAAACCCGGGATTGAACCAGGG"
+    },
+    {
+        "known_id": 185,
+        "subject": "G",
+        "attribute": "AAATG",
+        "template": "{}",
+        "prediction": "AAATGATTAATCAGCTAGAGTGGTGAGAACATTGCTTTTAAACTGCCAGCTGCGGCCTTGAGGGATGACTCAGCAGTTAAGAGTGCTTGCTGCTTTTGCA",
+        "prompt": "G"
+    },
+    {
+        "known_id": 186,
+        "subject": "ACAG",
+        "attribute": "TGAG",
+        "template": "GGACAGCAAACACGAATCAGCAGTGGTGGCATGATCTAGCAGAA{}CCAGGCCTCAGCCAAATCACCA",
+        "prediction": "TGAGTCAGCAGGGATGATTAAGAGCAGCTTG",
+        "prompt": "GGACAGCAAACACGAATCAGCAGTGGTGGCATGATCTAGCAGAAACAGCCAGGCCTCAGCCAAATCACCA"
+    },
+    {
+        "known_id": 187,
+        "subject": "TCTTCA",
+        "attribute": "TACT",
+        "template": "{}",
+        "prediction": "TACTAAGCAGTTCACAAAGTCTATGATGATCTCAGAAGGTGTCTACTGTAGGGTTTATCTCAGACAAGCACTGATCTGGCCATAAATGCTCATGA",
+        "prompt": "TCTTCA"
+    },
+    {
+        "known_id": 188,
+        "subject": "TTGG",
+        "attribute": "AAAAACTT",
+        "template": "AAAGGCTTACAG{}CTCAGAGTGACTCTAGGGAGAG",
+        "prediction": "AAAAACTTTTTGGCATTCCCACTCTTACCATGCAGGAACAAACTCATTGCCGCTTGGATCTGC",
+        "prompt": "AAAGGCTTACAGTTGGCTCAGAGTGACTCTAGGGAGAG"
+    },
+    {
+        "known_id": 189,
+        "subject": "CAG",
+        "attribute": "CCATGG",
+        "template": "TCTGCTGCTCACCAAGGCATGCAGCAGTGAGGCAGTCCTGG{}ACAGGGATCTGG",
+        "prediction": "CCATGGAGGGGGAAGGTGAGTCCAGGGGATGCAGAGCTTGCACTG",
+        "prompt": "TCTGCTGCTCACCAAGGCATGCAGCAGTGAGGCAGTCCTGGCAGACAGGGATCTGG"
+    },
+    {
+        "known_id": 190,
+        "subject": "ATGAA",
+        "attribute": "ACAG",
+        "template": "ACCCGGGTAGGAA{}",
+        "prediction": "ACAGTCAGCAGCACTCTACAGGAAATGCCTAAATGAGAAAACTGCTGATCAAACGAGAAAGAGGAACTTAGCAGTACAGCCAG",
+        "prompt": "ACCCGGGTAGGAAATGAA"
+    },
+    {
+        "known_id": 191,
+        "subject": "CACATGG",
+        "attribute": "AACA",
+        "template": "ACC{}",
+        "prediction": "AACACTAGAACTTTCAGAAGGTCTTTGATCAAGAGGAGGTGAAACGGCCACCTTGGTGGAAGTGAGAGCGTGGGTCAGTAGTGCTCTCTAG",
+        "prompt": "ACCCACATGG"
+    },
+    {
+        "known_id": 192,
+        "subject": "ACTT",
+        "attribute": "AAG",
+        "template": "ATTCTCCAAACACTCAAAGCTCCTGTTATCTGGATGGTTCAATACACTGCCTACT{}CAAGGACAAAGAAGATGGTT",
+        "prediction": "AAGAAATTCCAATGGACCGCCT",
+        "prompt": "ATTCTCCAAACACTCAAAGCTCCTGTTATCTGGATGGTTCAATACACTGCCTACTACTTCAAGGACAAAGAAGATGGTT"
+    },
+    {
+        "known_id": 193,
+        "subject": "AGCTG",
+        "attribute": "TCATG",
+        "template": "GGAGACTGAAACGGAAGAGGG{}AAGATGAGGGAGAAGAAGCTCATGTGAGACGACC",
+        "prediction": "TCATGACTCATGGAGGACTAGAGGCTCTCAGCAAGGACGGA",
+        "prompt": "GGAGACTGAAACGGAAGAGGGAGCTGAAGATGAGGGAGAAGAAGCTCATGTGAGACGACC"
+    },
+    {
+        "known_id": 194,
+        "subject": "CTACCA",
+        "attribute": "AAAA",
+        "template": "CAGTGAATGG{}ACAAG",
+        "prediction": "AAAAAAGGAACTACGGCGTCTCAAAAGCCCCCACACTAAAGAGCGGAAAAAACAGAAGTTGGTATGGGGCCGAGTGTTTG",
+        "prompt": "CAGTGAATGGCTACCAACAAG"
+    },
+    {
+        "known_id": 195,
+        "subject": "TAA",
+        "attribute": "CCTGTGG",
+        "template": "G{}CCAAATGGCTTAGTCAGCCCAGTTCTTCCTTACTACTGGGGAAAGCACCTCAGCGTGCTTG",
+        "prediction": "CCTGTGGTGAGTCAGCAGCTTTGGAGTCACAGTCTG",
+        "prompt": "GTAACCAAATGGCTTAGTCAGCCCAGTTCTTCCTTACTACTGGGGAAAGCACCTCAGCGTGCTTG"
+    },
+    {
+        "known_id": 196,
+        "subject": "G",
+        "attribute": "TCCTT",
+        "template": "{}",
+        "prediction": "TCCTTATCCTACCAAGCCGGGTCCCTGTGATGCTGAGTCACCGCGGCCAGCAAGTTCTGAATGACTGTGTTCCCTCTTGGGAGTGCTCTCCCAGCTTGGG",
+        "prompt": "G"
+    },
+    {
+        "known_id": 197,
+        "subject": "ATG",
+        "attribute": "T",
+        "template": "TTTGCTTTTTCTTCCCGTCCTATCCCAGTGCGCTGTTGCTTAAGCAGAACCAGATGCGCGTCCCTTTTAAAAG{}AAAAAAACTGTATGAGTCAGCAGG",
+        "prediction": "T",
+        "prompt": "TTTGCTTTTTCTTCCCGTCCTATCCCAGTGCGCTGTTGCTTAAGCAGAACCAGATGCGCGTCCCTTTTAAAAGATGAAAAAAACTGTATGAGTCAGCAGG"
+    },
+    {
+        "known_id": 198,
+        "subject": "CCT",
+        "attribute": "CAGG",
+        "template": "CTGAGGTTGGAATATGCGAGTCACCTCCACCTAGGCTACT{}ACTGAATGGGCTAGCCCTGCCATACAATATTGGGTAAAGGACCTCTCG",
+        "prediction": "CAGGCAAATG",
+        "prompt": "CTGAGGTTGGAATATGCGAGTCACCTCCACCTAGGCTACTCCTACTGAATGGGCTAGCCCTGCCATACAATATTGGGTAAAGGACCTCTCG"
+    },
+    {
+        "known_id": 199,
+        "subject": "TATGG",
+        "attribute": "TCC",
+        "template": "CAGCAGAAAAG{}ATGACTCAGAAAAGTGTGAGACGACTCAGCAGAAAAGTGGAAGGTGACTCAGCAGAAAAGTGCTTGCTGCTTGTGTGCACA",
+        "prediction": "TCCC",
+        "prompt": "CAGCAGAAAAGTATGGATGACTCAGAAAAGTGTGAGACGACTCAGCAGAAAAGTGGAAGGTGACTCAGCAGAAAAGTGCTTGCTGCTTGTGTGCACA"
+    },
+    {
+        "known_id": 200,
+        "subject": "CCTCT",
+        "attribute": "CCCAAAG",
+        "template": "{}CTGCAAAGATCTCAAGTTTGCAGTTTGCCTCTGGGCCTAACG",
+        "prediction": "CCCAAAGTAGGTTCATGAACTGCTGGCTGTTTGTCTACTTAGGCCTGGCCTTCC",
+        "prompt": "CCTCTCTGCAAAGATCTCAAGTTTGCAGTTTGCCTCTGGGCCTAACG"
+    },
+    {
+        "known_id": 201,
+        "subject": "CCTG",
+        "attribute": "CCCAGG",
+        "template": "CCTTCACTTTCCTGTCCATCTCCAGACTCATTTTTCTTGTT{}AAAGGCTACTGCA",
+        "prediction": "CCCAGGAATTGTGTACGAAGGGAACTTTTCCCCTCTTCCCGAC",
+        "prompt": "CCTTCACTTTCCTGTCCATCTCCAGACTCATTTTTCTTGTTCCTGAAAGGCTACTGCA"
+    },
+    {
+        "known_id": 202,
+        "subject": "TGGGTG",
+        "attribute": "CTGGGAA",
+        "template": "TG{}",
+        "prediction": "CTGGGAACCAAAGCTGGCTTCTCTATCCTCTGGGAGAGCAGCCGGTGCTCTTAACTGCTGAGTCATCTTCTACTTCCCAGCCCCCCCCCCCCC",
+        "prompt": "TGTGGGTG"
+    },
+    {
+        "known_id": 203,
+        "subject": "AGAGAG",
+        "attribute": "CTCTTG",
+        "template": "AGAAAGAACTTCCTCCCAATTGCTCTTGAAATTGTCA{}ATGACTCAGCAGTAAAGAGGCTGTGTTG",
+        "prediction": "CTCTTGCATAGGATTCAGGTTCAGTTCTTA",
+        "prompt": "AGAAAGAACTTCCTCCCAATTGCTCTTGAAATTGTCAAGAGAGATGACTCAGCAGTAAAGAGGCTGTGTTG"
+    },
+    {
+        "known_id": 204,
+        "subject": "CAG",
+        "attribute": "AAAA",
+        "template": "TGGAGTT{}TACAATTTGTGAGAGGCACTTTTACCCAGGTACT",
+        "prediction": "AAAACTTGCTGAGTCATCACTCTGGCTTCTTAATCCTTTCTCCTTCCTTTTTTTTTT",
+        "prompt": "TGGAGTTCAGTACAATTTGTGAGAGGCACTTTTACCCAGGTACT"
+    },
+    {
+        "known_id": 205,
+        "subject": "CAAG",
+        "attribute": "AAAG",
+        "template": "CTCAATTAGTGAT{}CAGGGAGGGCCCAGCCCATTGTGGGTGGAGCCATCCCTGGGCTGGTGGTTTTATAAG",
+        "prediction": "AAAGCAAGCTGAGGCGGGCTGGCGAGA",
+        "prompt": "CTCAATTAGTGATCAAGCAGGGAGGGCCCAGCCCATTGTGGGTGGAGCCATCCCTGGGCTGGTGGTTTTATAAG"
+    },
+    {
+        "known_id": 206,
+        "subject": "ATGTTGG",
+        "attribute": "CAAAG",
+        "template": "CTGGGGTGGGGGG{}",
+        "prediction": "CAAAGTGCCAGGAGTGCAGGTGCTGAGTCAGCGAAAGGCTTTCCAGCCACTTGCAGTTCCTATTATCTCTCCCCGGGAGAT",
+        "prompt": "CTGGGGTGGGGGGATGTTGG"
+    },
+    {
+        "known_id": 207,
+        "subject": "ATGAG",
+        "attribute": "CAG",
+        "template": "CAGCCTGTGGGTAAAGAATGCAGAGCTCAG{}CTGCAGTGAATGGGGCCAAG",
+        "prediction": "CAGCCAGGATCCTTAAATAGCATGACTCAGCAGAGTCCCTTAATCA",
+        "prompt": "CAGCCTGTGGGTAAAGAATGCAGAGCTCAGATGAGCTGCAGTGAATGGGGCCAAG"
+    },
+    {
+        "known_id": 208,
+        "subject": "CTGTGG",
+        "attribute": "CTATCTG",
+        "template": "{}TAGATCTTTCTCTAGATTTCAAGGAA",
+        "prediction": "CTATCTGCAATTAAGGATAAGGTTCGTGGAGAAAGCCCTGGTTAAAATGGTTTTGTGTTCAGTTATACA",
+        "prompt": "CTGTGGTAGATCTTTCTCTAGATTTCAAGGAA"
+    },
+    {
+        "known_id": 209,
+        "subject": "CTGAAG",
+        "attribute": "GGG",
+        "template": "{}ACTTTAACCTTGCTCTTAAACACAGTATTGATTGGATATGCTGAGTCAGCAAAATCCAGG",
+        "prediction": "GGGTTTGTCATATCTAATGCATCACTGTTTCTTGG",
+        "prompt": "CTGAAGACTTTAACCTTGCTCTTAAACACAGTATTGATTGGATATGCTGAGTCAGCAAAATCCAGG"
+    },
+    {
+        "known_id": 210,
+        "subject": "TGGAG",
+        "attribute": "CTGGAG",
+        "template": "TGAAAAGTTGAAAAATGCTGATCTGGTCAAACTTTGCATGTGTGTCTCTGTGCAGTACCTTCAGAGTCCAGAAGAGGGCACCAGATCCCT{}",
+        "prediction": "CTGGAG",
+        "prompt": "TGAAAAGTTGAAAAATGCTGATCTGGTCAAACTTTGCATGTGTGTCTCTGTGCAGTACCTTCAGAGTCCAGAAGAGGGCACCAGATCCCTTGGAG"
+    },
+    {
+        "known_id": 211,
+        "subject": "TGGG",
+        "attribute": "ATTCGAA",
+        "template": "G{}",
+        "prediction": "ATTCGAACCCACGCCTCCAGGGGAGACCAGAACCCTCAGAGCGAGGAAGCCATAGCTTGAGTCTGGCGCCTTAGACCACTCGGCCATCCTGACATG",
+        "prompt": "GTGGG"
+    },
+    {
+        "known_id": 212,
+        "subject": "TCTT",
+        "attribute": "CTGAG",
+        "template": "CCCAGAAGTCCCCACCAGGATCC{}TAAGAGCAGCTTACATTCTGAATTG",
+        "prediction": "CTGAGTCATCTCTCCAGCCCTATGCTGTTCCTTTAATGGCTGGAGAAAG",
+        "prompt": "CCCAGAAGTCCCCACCAGGATCCTCTTTAAGAGCAGCTTACATTCTGAATTG"
+    },
+    {
+        "known_id": 213,
+        "subject": "AAGAGG",
+        "attribute": "CTTAA",
+        "template": "{}ATGGCTCCAGGTCTAACTAGAGGCGCTTTTGGTTCGTCC",
+        "prediction": "CTTAAATGAAAGAAGCTCCACAGACAGAGCTTGGCTATCTCCAGATTCTTATTAGA",
+        "prompt": "AAGAGGATGGCTCCAGGTCTAACTAGAGGCGCTTTTGGTTCGTCC"
+    },
+    {
+        "known_id": 214,
+        "subject": "AAGGCGG",
+        "attribute": "CTTAG",
+        "template": "AACAGTCTGGAGGTCTCAGACTGGATCTATAG{}AGTT",
+        "prediction": "CTTAGTCTTATGCATTGCAGCATGATCTGTTTTACAAAAGCATTGTTTTCCAACAGGC",
+        "prompt": "AACAGTCTGGAGGTCTCAGACTGGATCTATAGAAGGCGGAGTT"
+    },
+    {
+        "known_id": 215,
+        "subject": "CCGG",
+        "attribute": "ACT",
+        "template": "ATCAACATTTGTCTTATCCCC{}TCTG",
+        "prediction": "ACTCATGGCCTTGTTTGGCTGTCAATCTTTTTCTGCCCTCTTGTTCAGACTGGCTTGGGTTTTTCCACTACA",
+        "prompt": "ATCAACATTTGTCTTATCCCCCCGGTCTG"
+    },
+    {
+        "known_id": 216,
+        "subject": "TGTG",
+        "attribute": "CAGGCTG",
+        "template": "CAAGTATAACATGCAGTGCCAGCTACGTGCAAA{}CTCA",
+        "prediction": "CAGGCTGTCTTGGACTCAACTGGCGCATCTTTGAAAATTAAAATGCATAAGGGCAGGTGA",
+        "prompt": "CAAGTATAACATGCAGTGCCAGCTACGTGCAAATGTGCTCA"
+    },
+    {
+        "known_id": 217,
+        "subject": "TAT",
+        "attribute": "AAGACA",
+        "template": "TTGGCGACGTTCATGTCTACTTGGTGCAGAGACCTTTGATGTTAAATGTGTTTG{}TGTGAGCTCTATGCCGGAGACAGTGTTTT",
+        "prediction": "AAGACATCGCAACTG",
+        "prompt": "TTGGCGACGTTCATGTCTACTTGGTGCAGAGACCTTTGATGTTAAATGTGTTTGTATTGTGAGCTCTATGCCGGAGACAGTGTTTT"
+    },
+    {
+        "known_id": 218,
+        "subject": "TCCA",
+        "attribute": "TCCCA",
+        "template": "TTGTT{}",
+        "prediction": "TCCCATTCACTAGCCCATAAAATGGTGCCGTCCACATTCGGAGTTAACCACTCTGAAGACATCCTTACAGACATGAGCTGTGTCTCTTAGGT",
+        "prompt": "TTGTTTCCA"
+    },
+    {
+        "known_id": 219,
+        "subject": "CTCG",
+        "attribute": "CTACTGG",
+        "template": "GCTGGCCCAGAAGG{}TCAGGTCCTTG",
+        "prediction": "CTACTGGCAGTGTGTGGGTGGCTTTCTATAGAGTTCCGTGGTCTGCCGCTGGCTGGGCCTGCCAGTCAGGTC",
+        "prompt": "GCTGGCCCAGAAGGCTCGTCAGGTCCTTG"
+    },
+    {
+        "known_id": 220,
+        "subject": "TTTAG",
+        "attribute": "TCTT",
+        "template": "ATGATGATCTCCTTG{}ACGGTT",
+        "prediction": "TCTTCATTCTATCCAAACAGTCTTCTGATGAGTCAGCACATATCCTTCCCTCTCAGGAGACCTTTATCTGTAGTC",
+        "prompt": "ATGATGATCTCCTTGTTTAGACGGTT"
+    },
+    {
+        "known_id": 221,
+        "subject": "TTG",
+        "attribute": "TCTTG",
+        "template": "{}CTATAAAGATCTTTAATCCCACACTTTAAGTTCA",
+        "prediction": "TCTTGACAAGTTATGTTATGTCATGAACGCTGTCCTGGCATATTTGTTGCTTTTTGTTGTACTG",
+        "prompt": "TTGCTATAAAGATCTTTAATCCCACACTTTAAGTTCA"
+    },
+    {
+        "known_id": 222,
+        "subject": "TTTT",
+        "attribute": "TCAAG",
+        "template": "TCAG{}TCTACTCCAG",
+        "prediction": "TCAAGCAGAGGAGACAGTCCTATGTTGAGTCAGCAATTTTAAATTAGTTTGGGAGGAACAATTACAAGACTATTTAGACAACA",
+        "prompt": "TCAGTTTTTCTACTCCAG"
+    },
+    {
+        "known_id": 223,
+        "subject": "AGGG",
+        "attribute": "TTTT",
+        "template": "GTAAATATGGAGCGAGAAATGTAGGCTAGCCTCA{}CCCCTGCGCAGAGCGCCTTTG",
+        "prediction": "TTTTTGCAAAGCTCAGCACTTCACCCCAGGATGCTGGCACTC",
+        "prompt": "GTAAATATGGAGCGAGAAATGTAGGCTAGCCTCAAGGGCCCCTGCGCAGAGCGCCTTTG"
+    },
+    {
+        "known_id": 224,
+        "subject": "CAGTGG",
+        "attribute": "TATAA",
+        "template": "AGTTGAGATAGCAAGCATGAATCAG{}",
+        "prediction": "TATAACTACCTAGCAGAGACAGCCAGGCGTCAGCCAAATTGGCATGAGTCAGCAGGAAGGACCAGGAGGA",
+        "prompt": "AGTTGAGATAGCAAGCATGAATCAGCAGTGG"
+    },
+    {
+        "known_id": 225,
+        "subject": "CTCG",
+        "attribute": "ATTGAG",
+        "template": "{}CAATTTAAGAAATGCTGACAAAGCTGTTTCAGGACTCATGAGCCAGGACTGGCTATTTTAGATTCTCATGGCGCCATCTAGTG",
+        "prediction": "ATTGAGACAAGCAA",
+        "prompt": "CTCGCAATTTAAGAAATGCTGACAAAGCTGTTTCAGGACTCATGAGCCAGGACTGGCTATTTTAGATTCTCATGGCGCCATCTAGTG"
+    },
+    {
+        "known_id": 226,
+        "subject": "ATCAGGG",
+        "attribute": "TAAG",
+        "template": "TGGAAGGAGGTGAACAGAAATGAAAACAAAGAGCCATGGGACGGGAGGTATCAGCAGG{}AGAAGAGAGCAGAG",
+        "prediction": "TAAGATGCTAGAGGTGGTACAT",
+        "prompt": "TGGAAGGAGGTGAACAGAAATGAAAACAAAGAGCCATGGGACGGGAGGTATCAGCAGGATCAGGGAGAAGAGAGCAGAG"
+    },
+    {
+        "known_id": 227,
+        "subject": "TTCA",
+        "attribute": "CTT",
+        "template": "AGGGGTTG{}ATAGCAGCATGTGATAG",
+        "prediction": "CTTCTGCTGCAGGAATATGAAGTGAAGGACAAGTGAGCTTGTCTGGGAGTCAGGACTAGGGTGGCAGGTGAA",
+        "prompt": "AGGGGTTGTTCAATAGCAGCATGTGATAG"
+    },
+    {
+        "known_id": 228,
+        "subject": "ATTAAG",
+        "attribute": "AAAAAATG",
+        "template": "TTAAGCGCA{}CTGGGAAAGTTAAGGTT",
+        "prediction": "AAAAAATGAGGGAAATAGACTTCTTAGTCTTTAATTTGCGAAAGTTCCGAGTGTGCTCGCGCTGAGCTT",
+        "prompt": "TTAAGCGCAATTAAGCTGGGAAAGTTAAGGTT"
+    },
+    {
+        "known_id": 229,
+        "subject": "CTCAG",
+        "attribute": "AAG",
+        "template": "CTGGACC{}ATTAA",
+        "prediction": "AAGTCTGATGCTCTACCGACTGAGCTATCCGGGCTCTGAGGGGTTGCTGTTCTTTATTGAATAAAGAAAGATACAAGAAAAGCA",
+        "prompt": "CTGGACCCTCAGATTAA"
+    },
+    {
+        "known_id": 230,
+        "subject": "TTCA",
+        "attribute": "AATGG",
+        "template": "{}TATTCCCAG",
+        "prediction": "AATGGAGCACATAAAAATGCTGAGCTCAGCAATAAATGCCTGCCATCCATTCACTAGGGAGCAAGAGACAGGAGGACCTCAGGGAACC",
+        "prompt": "TTCATATTCCCAG"
+    },
+    {
+        "known_id": 231,
+        "subject": "TACAAA",
+        "attribute": "ACAGG",
+        "template": "G{}AGCACTTCTGCTCTTTTCTGCTTTCTCACGGTGACTTGAGAA",
+        "prediction": "ACAGGCTTTAATTCCTCATGAGTAAGTGCATTGTTTATCTCTCAGAGAGTCG",
+        "prompt": "GTACAAAAGCACTTCTGCTCTTTTCTGCTTTCTCACGGTGACTTGAGAA"
+    },
+    {
+        "known_id": 232,
+        "subject": "TCTAA",
+        "attribute": "AC",
+        "template": "GTGTGTTTTCTGTGGCAATTTGATCA{}ACCAAATTGCCAAAAAAAGAAGCAATCTCAAAACAATTTCATTTGTGGCTTCACTCTTAAATCAAGGG",
+        "prediction": "AC",
+        "prompt": "GTGTGTTTTCTGTGGCAATTTGATCATCTAAACCAAATTGCCAAAAAAAGAAGCAATCTCAAAACAATTTCATTTGTGGCTTCACTCTTAAATCAAGGG"
+    },
+    {
+        "known_id": 233,
+        "subject": "ACTAG",
+        "attribute": "AGCA",
+        "template": "TTGGTCTCAGACTCACTGCAGGGATGTCAGCCAACAGAACAGCCGTATGACTCAGAACCTACAAG{}AGG",
+        "prediction": "AGCACAGGATGCAGGCAGAGATGTCAAC",
+        "prompt": "TTGGTCTCAGACTCACTGCAGGGATGTCAGCCAACAGAACAGCCGTATGACTCAGAACCTACAAGACTAGAGG"
+    },
+    {
+        "known_id": 234,
+        "subject": "TGGG",
+        "attribute": "TGAG",
+        "template": "GGTCACTGTATTTATG{}TGATGCTCGATAGAGAAG",
+        "prediction": "TGAGTCAGCAATTTCACTCCGGTTCTTGGATCTCACACCAGGCACTTTCTCTCCTCTCCCAGT",
+        "prompt": "GGTCACTGTATTTATGTGGGTGATGCTCGATAGAGAAG"
+    },
+    {
+        "known_id": 235,
+        "subject": "AGAAAG",
+        "attribute": "TGAACA",
+        "template": "{}CCCCTAATGGTTACT",
+        "prediction": "TGAACATTTTTTTTTTAGGGAAGTTGGTCAGAGGGTGTATGCAATGCCAAGTCAGCAGTTCCTCTCATTGTAGAACTTCC",
+        "prompt": "AGAAAGCCCCTAATGGTTACT"
+    },
+    {
+        "known_id": 236,
+        "subject": "CAGG",
+        "attribute": "CAGTG",
+        "template": "AGCTTTGTGCCTTTGCAAGACAG{}CTCAGCCAG",
+        "prediction": "CAGTGATTAGGTTGATTGGAGTACATCAAGCAATCAGCATTCTCAATTTCCTCCCATTGAATTCA",
+        "prompt": "AGCTTTGTGCCTTTGCAAGACAGCAGGCTCAGCCAG"
+    },
+    {
+        "known_id": 237,
+        "subject": "CCCTCA",
+        "attribute": "CCAGAG",
+        "template": "TTCCATT{}TAGCCAGAGTGCTTGCACAAG",
+        "prediction": "CCAGAGACACAGCCATTATTCTGGCAGTCAGGGTAGCAGAGTCCAGTGCCAAAGAACTCACATTATG",
+        "prompt": "TTCCATTCCCTCATAGCCAGAGTGCTTGCACAAG"
+    },
+    {
+        "known_id": 238,
+        "subject": "ACGG",
+        "attribute": "CAAAAG",
+        "template": "GAGGAATCCCTACCCA{}AACATACTCTTGGCCCGAGCTATCGAGGAAGAG",
+        "prediction": "CAAAAGATTCACGGGACTGGTTGCCCTGCTGAAAACCTACTCCTAACT",
+        "prompt": "GAGGAATCCCTACCCAACGGAACATACTCTTGGCCCGAGCTATCGAGGAAGAG"
+    }
+]

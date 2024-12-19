@@ -1,0 +1,1 @@
+python run_gcg2.py --data_path  /projects/p32013/DNA/data/GUE/prom/prom_300_all/test2.csv --mlm_path zhihan1996/DNABERT-2-117M --save_path /projects/p32013/DNABERT-meta/nanoGCG/result/prom_300_all/result10.csv --num_label 2 --num_worker 4
