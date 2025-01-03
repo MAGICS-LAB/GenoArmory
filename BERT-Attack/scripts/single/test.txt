@@ -1,0 +1,1 @@
+python bertattack3_single.py --data_path  /projects/p32013/DNABERT-meta/BERT-Attack/GUE/EMP/H3/cat.csv --mlm_path zhihan1996/DNABERT-2-117M --output_dir /projects/p32013/DNABERT-meta/BERT-Attack/results/single/H3.json --num_label 2  --use_bpe 0 --k 48 --threshold_pred_score 0 --start 5 --end 10

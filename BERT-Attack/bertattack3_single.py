@@ -138,39 +138,30 @@ def calculate_perplexity(sequence, clm_path):
     perplexity = torch.exp(loss).item()
     return perplexity
 
-
 def get_important_scores(words, scorer, clm_path, tokenizer, batch_size, max_length):
     """
-    Calculate the importance scores of each word in the sequence using perplexity.
+    Calculate the importance scores of each word in the sequence using perplexity and return a dictionary.
     """
-    # Generate masked sequences by replacing each word with '[UNK]'
-
+    # Generate the original text and calculate its perplexity
     original_text = ''.join(words)
-
-    print(original_text)
-    # original_ppl = scorer.compute(predictions=[original_text], model_id=clm_path)['mean_perplexity']
+    # print(f"Original text: {original_text}")
     original_ppl = scorer.get_perplexity(original_text)
 
-    
+    # Generate masked sequences
     masked_words = _get_masked(words)
-    
     texts = [''.join(words) for words in masked_words]
 
-    # Calculate perplexity for the original sequence
-    
+    # Calculate perplexity scores for each masked sequence
+    perplexities = [scorer.get_perplexity(text) for text in texts]
 
-    # Store perplexity scores for each masked sequence
-    perplexities = []
-    for text in texts:
-        # ppl_score = scorer.compute(predictions=[text], model_id=clm_path)['mean_perplexity']
-        ppl_score = scorer.get_perplexity(text)
-        perplexities.append(ppl_score)
-
-    
-    # Calculate importance scores based on perplexity differences
+    # Calculate importance scores
     import_scores = np.array([original_ppl - ppl for ppl in perplexities])
 
-    return import_scores
+    # Create a dictionary with index and importance scores
+    result_dict = {str(idx): score for idx, score in enumerate(import_scores)}
+
+    # Return the dictionary
+    return result_dict
 
 
 def get_substitues(substitutes, tokenizer, mlm_model, use_bpe, substitutes_score=None, threshold=3.0):
@@ -262,75 +253,10 @@ def attack(feature, clm_path, mlm_model, tokenizer, k, batch_size, max_length=51
     # print(scorer.get_perplexity("ACGTAGCTAG"))
     # print(calculate_perplexity("ACGTAGCTAG", clm_path))
     # exit(0)
-    important_scores = get_important_scores(words,  scorer, clm_path,
+    result_dict = get_important_scores(words,  scorer, clm_path,
                                             tokenizer, batch_size, max_length)
-
-    feature.query += int(len(words))
-    list_of_index = sorted(enumerate(important_scores), key=lambda x: x[1], reverse=True)
-    #print(list_of_index)
-    final_words = copy.deepcopy(words)
-    feature.final_adverse = feature.seq
-    for top_index in list_of_index:
-        if feature.change > int(0.4 * (len(words))):
-            return feature
-        if top_index[0] >= len(words):
-            continue
-        tgt_word = words[top_index[0]]
-        if tgt_word in filter_words:
-            continue
-
-        # print(top_index)
-        if top_index[0] >= len(keys) or keys[top_index[0]]==None:
-            continue
-        if keys[top_index[0]][0] > max_length - 2:
-            continue
-
-
-        substitutes = word_predictions[keys[top_index[0]][0]:keys[top_index[0]][1]]  # L, k
-        # print(substitutes)
-        word_pred_scores = word_pred_scores_all[keys[top_index[0]][0]:keys[top_index[0]][1]]
-        
-        # print(word_pred_scores)
-
-        substitutes = get_substitues(substitutes, tokenizer, mlm_model, use_bpe, word_pred_scores)
-
-        most_gap = 0.0
-        candidate = None
-
-        for substitute_ in substitutes:
-            orignal_ppl = scorer.get_perplexity(feature.final_adverse)
-            substitute = substitute_
-
-            if substitute == tgt_word:
-                continue  # filter out original word
-            if '##' in substitute:
-                continue  # filter out sub-word
-
-            if substitute in filter_words:
-                continue
-            if substitute in w2i and tgt_word in w2i:
-                if cos_mat[w2i[substitute]][w2i[tgt_word]] < 0.4:
-                    continue
-            temp_replace = final_words
-            temp_replace[top_index[0]] = substitute
-            temp_text = ''.join(temp_replace)
-            
-            temp_ppl = scorer.get_perplexity(temp_text)
-
-            feature.query += 1
-            
-            # print(temp_ppl)
-            # print(orignal_ppl)
-            if temp_ppl < orignal_ppl:
-                feature.change += 1
-                final_words[top_index[0]] = substitute
-                feature.changes.append([keys[top_index[0]][0], substitute, tgt_word])
-                print([keys[top_index[0]][0], substitute, tgt_word])
-                feature.final_adverse = temp_text
-            
-    #feature.final_adverse = (''.join(final_words))
-    
-    return feature
+    print(result_dict)
+    return result_dict
 
 
 def evaluate(features, scorer=None, clm_path=None):
@@ -486,25 +412,25 @@ def run_attack():
         cos_mat, w2i, i2w = None, {}, {}
 
     print('finish get-sim-embed')
-    features_output = []
+    result_output = []
 
     with torch.no_grad():
         for index, feature in enumerate(features[start:end]):
             seq_a, label = feature
             seq_a = get_tokenized_dna(seq_a, tokenizer_mlm)
             feat = Feature(seq_a, label)
-            # print(feat.seq[:100], feat.label)
-            feat = attack(feat, clm_path, mlm_model, tokenizer_mlm, k, batch_size=32, max_length=128,
+            result = attack(feat, clm_path, mlm_model, tokenizer_mlm, k, batch_size=32, max_length=128,
                           cos_mat=cos_mat, w2i=w2i, i2w=i2w, use_bpe=use_bpe, scorer=scorer)
 
+            result_output.append(result)
 
-            # print(feat.changes, feat.change, feat.query, feat.success)
+    os.makedirs(os.path.dirname(output_dir), exist_ok=True)
 
-            features_output.append(feat)
+    # Save the result_output to a JSON file
+    with open(output_dir, "w") as f:
+        json.dump(result_output, f, indent=4)
 
-    evaluate(features_output, scorer=scorer, clm_path=clm_path)
 
-    dump_features(features_output, output_dir)
 
 
 if __name__ == '__main__':

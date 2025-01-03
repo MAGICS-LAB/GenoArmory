@@ -145,6 +145,7 @@ def main():
 
 def trace_with_patch(
     model,  # The model
+    tokenizer,
     inp,  # A set of inputs
     states_to_patch,  # A list of (token index, layername) triples to restore
     answers_t,  # Answer probabilities to collect
@@ -184,13 +185,29 @@ def trace_with_patch(
     # With the patching rules defined, run the patched model in inference.
     additional_layers = [] if trace_layers is None else trace_layers
     
+    outputs_exp = []
     with torch.no_grad(), nethook.TraceDict(
         model,
         [embed_layername] + list(patch_spec.keys()) + additional_layers,
         edit_output=patch_rep,
     ) as td:
-        outputs_exp = model(**inp)
+        for inps in inp:
+            inps = torch.tensor(inps).to(model.device)
+            outputs_exps = model.generate(
+                input_ids=inps.unsqueeze(0),
+                max_new_tokens=1,  # Generate only one new token
+                temperature=0.7,
+                top_k=50,
+                repetition_penalty=1.0,
+                pad_token_id=tokenizer.pad_token_id,
+                eos_token_id=tokenizer.eos_token_id,
+                return_dict_in_generate=True,
+                output_scores=True  # Include logits in the output
+            )
 
+            outputs_exp.append(outputs_exps.scores[0])
+
+    outputs_exp = torch.stack(outputs_exp)        
     # We report softmax probabilities for the answers_t token predictions of interest.
     probs = torch.softmax(outputs_exp.logits[1:, -1, :], dim=1).mean(dim=0)[answers_t]
     # If tracing all layers, collect all activations together to return.
@@ -266,19 +283,24 @@ def trace_with_repatch(
 
     return probs
 
-# def predict_from_input(model, inp):
-#     out = model(**inp)["logits"]
-#     probs = torch.softmax(out[:, -1], dim=1)
-#     p, preds = torch.max(probs, dim=1)
-#     return preds, p
 
-def predict_from_input(model, inp):
-    out = model.generate(**inp)
-    print(out)
-    out = out["logits"]
-    # Consider processing the logits for the full sequence if needed
-    probs = torch.softmax(out[:, -1, :], dim=-1)  # Retain dimensional consistency
-    p, preds = torch.max(probs, dim=-1)  # Extract token predictions
+
+def predict_from_input(model,tokenizer, inp):
+    out = model.generate(
+          input_ids=inp.unsqueeze(0),
+          max_new_tokens=1,  # Generate only one new token
+          temperature=0.7,
+          top_k=50,
+          repetition_penalty=1.0,
+          pad_token_id=tokenizer.pad_token_id,
+          eos_token_id=tokenizer.eos_token_id,
+          return_dict_in_generate=True,
+          output_scores=True  # Include logits in the output
+      )
+    
+    out = out.scores[0]
+    probs = torch.softmax(out, dim=-1)  # Retain dimensional consistency
+    p, preds = torch.max(probs, dim=-1) 
     return preds, p
 
 def calculate_hidden_flow(
@@ -298,27 +320,30 @@ def calculate_hidden_flow(
     Runs causal tracing over every token/layer combination in the network
     and returns a dictionary numerically summarizing the results.
     """
-    inp = make_inputs(mt.tokenizer, [prompt] * (samples + 1))
+    prompt_token_ids = mt.tokenizer(["[CLS]"+ prompt] * (samples + 1), add_special_tokens=False)['input_ids']
     with torch.no_grad():
-        answer_t, base_score = [d[0] for d in predict_from_input(mt.model, inp)]
+        token_id = prompt_token_ids[0]
+        token_id = torch.tensor(token_id).to(mt.model.device)
+        answer_t, base_score = [d[0] for d in predict_from_input(mt.model, mt.tokenizer, token_id)]
     [answer] = decode_tokens(mt.tokenizer, [answer_t])
     # if expect is not None and answer.strip() != expect:
     #     return dict(correct_prediction=False)
-    e_range = find_token_range(mt.tokenizer, inp["input_ids"][0], subject)
+    e_range = find_token_range(mt.tokenizer, prompt_token_ids[0], subject)
 
     low_score = trace_with_patch(
-        mt.model, inp, [], answer_t, e_range, noise=noise
+        mt.model, mt.tokenizer,  prompt_token_ids, [], answer_t, e_range, noise=noise
     ).item()
     if kind == 'all':
         differences = trace_important_states(
-            mt.model, mt.num_layers, inp, e_range, answer_t, noise=noise
+            mt.model,  mt.tokenizer, mt.num_layers, torch.tensor(prompt_token_ids), e_range, answer_t, noise=noise
         )
     else:
         
         differences = trace_important_window(
             mt.model,
+            mt.tokenizer,
             mt.num_layers,
-            inp,
+            torch.tensor(prompt_token_ids),
             e_range,
             answer_t,
             noise=noise,
@@ -330,8 +355,8 @@ def calculate_hidden_flow(
         scores=differences,
         low_score=low_score,
         high_score=base_score,
-        input_ids=inp["input_ids"][0],
-        input_tokens=decode_tokens(mt.tokenizer, inp["input_ids"][0]),
+        input_ids=prompt_token_ids[0],
+        input_tokens=decode_tokens(mt.tokenizer, prompt_token_ids[0]),
         subject_range=e_range,
         answer=answer,
         window=window,
@@ -342,6 +367,7 @@ def calculate_hidden_flow(
 
 def trace_important_states(
     model,
+    tokenizer,
     num_layers,
     inp,
     e_range,
@@ -358,6 +384,7 @@ def trace_important_states(
         for layer in range(0, num_layers):
             r = trace_with_patch(
                 model,
+                tokenizer,
                 inp,
                 [(tnum, layername(model, layer))],
                 answer_t,
@@ -373,6 +400,7 @@ def trace_important_states(
 
 def trace_important_window(
     model,
+    tokenizer,
     num_layers,
     inp,
     e_range,
@@ -399,7 +427,7 @@ def trace_important_window(
                 )
             ]
             r = trace_with_patch(
-                model, inp, layerlist, answer_t, tokens_to_mix=e_range, noise=noise
+                model, tokenizer, inp, layerlist, answer_t, tokens_to_mix=e_range, noise=noise
             )
             row.append(r)
         table.append(torch.stack(row))
@@ -531,7 +559,6 @@ def plot_hidden_flow(
 
 
 def plot_trace_heatmap(result, savepdf=None, title=None, xlabel=None, modelname=None):
-    print(result)
     differences = result["scores"]
     low_score = result["low_score"]
     answer = result["answer"]
@@ -634,29 +661,6 @@ def find_token_range(tokenizer, token_array, substring):
     return (tok_start, tok_end)
 
 
-# def predict_token(mt, prompts, return_p=False):
-#     prompts = ["[CLS]" + p for p in prompts]
-#     prompt_token_ids = mt.tokenizer(prompts, return_tensors="pt", padding=True, truncation=True, add_special_tokens=False).to(mt.model.device)
-#     input_ids = prompt_token_ids['input_ids']
-#     print(input_ids)
-#     input_ids2 = mt.tokenizer(prompts, add_special_tokens=False)["input_ids"]
-#     print(input_ids2)
-#     # value_to_add = torch.tensor([3], device=input_ids.device)
-
-#     # # Add the value to each row
-#     # expanded_values = value_to_add.expand(input_ids.size(0), -1)
-#     # input_ids = torch.cat((input_ids, expanded_values), dim=1)
-#     attention_mask = prompt_token_ids['attention_mask']
-#     # expanded_attention_values = torch.ones((attention_mask.size(0), 1), device=attention_mask.device, dtype=attention_mask.dtype)
-#     # attention_mask = torch.cat((attention_mask, expanded_attention_values), dim=1)
-#     inp = {
-#         'input_ids': input_ids,
-#     }
-#     preds, p = predict_from_input(mt.model, inp)
-#     result = [mt.tokenizer.decode(c) for c in preds]
-#     if return_p:
-#         result = (result, p)
-#     return result
 
 
 def predict_token(mt, prompts, return_p=False):
@@ -664,22 +668,39 @@ def predict_token(mt, prompts, return_p=False):
     prompts = ["[CLS]" + p for p in prompts]
 
     # Tokenize the prompts
-    prompt_token_ids = mt.tokenizer(prompts, return_tensors="pt", padding=True, truncation=True, add_special_tokens=False).to(mt.model.device)
-    input_ids = prompt_token_ids['input_ids']
+    input_ids = mt.tokenizer(prompts, add_special_tokens=False)["input_ids"]
+    
+    p = []
+    result = []
+    for input_id in input_ids:
+        input_id = torch.tensor(input_id).to(mt.model.device)
+        # Generate using model.generate for consistency
+        outputs = mt.model.generate(
+            input_ids=input_id.unsqueeze(0),
+            max_new_tokens=1,  # Generate only one new token
+            temperature=0.7,
+            top_k=50,
+            repetition_penalty=1.0,
+            pad_token_id=mt.tokenizer.pad_token_id,
+            eos_token_id=mt.tokenizer.eos_token_id,
+            return_dict_in_generate=True,
+            output_scores=True  # Include logits in the output
+        )
+        
+        
+        
+        logits = outputs.scores[0]
+        probs = torch.softmax(logits, dim=-1)
+        generated_token_id = outputs.sequences[0, -1].item()
+        result.append(mt.tokenizer.decode(generated_token_id, skip_special_tokens=True).strip())
+        p.append(probs[0, generated_token_id].item())
 
-    # Generate using model.generate for consistency
-    outputs = mt.model.generate(
-        input_ids=input_ids,
-        max_length=input_ids.size(1) + 2,  # Generate one token beyond input length
-        temperature=0.7,  # Adjust temperature to match generate_sequences
-        top_k=50,  # Use top-k sampling to match generate_sequences
-        repetition_penalty=1.0,  # Match generate_sequences parameters
-        num_return_sequences=1,  # Generate one sequence per prompt
-    )
-    print(outputs)
+        
+        
 
     # Decode the generated tokens
-    result = [mt.tokenizer.decode(output[len(input_ids[i]):], skip_special_tokens=True).strip() for i, output in enumerate(outputs)]
+    if return_p:
+        result = (result, p)
     return result
 
 
@@ -687,22 +708,22 @@ def predict_token(mt, prompts, return_p=False):
 def collect_embedding_std(mt, subjects):
     alldata = []
     for s in subjects:
-        prompt_token_ids = mt.tokenizer([s], return_tensors="pt", padding=True, truncation=True, add_special_tokens=False).to(mt.model.device)
-        input_ids = prompt_token_ids['input_ids']
-        # value_to_add = torch.tensor([3], device=input_ids.device)
+        input_id = mt.tokenizer("[CLS]"+ s, add_special_tokens=False)['input_ids']
 
-        # # Add the value to each row
-        # expanded_values = value_to_add.expand(input_ids.size(0), -1)
-        # input_ids = torch.cat((input_ids, expanded_values), dim=1)
-        attention_mask = prompt_token_ids['attention_mask']
-        # expanded_attention_values = torch.ones((attention_mask.size(0), 1), device=attention_mask.device, dtype=attention_mask.dtype)
-        # attention_mask = torch.cat((attention_mask, expanded_attention_values), dim=1)
-        inp = {
-            'input_ids': input_ids,
-            'attention_mask': attention_mask,
-        }
+        input_id = torch.tensor(input_id).to(mt.model.device)
+
         with nethook.Trace(mt.model, layername(mt.model, 0, "embed")) as t:
-            mt.model(**inp)
+            outputs = mt.model.generate(
+                input_ids=input_id.unsqueeze(0),
+                max_new_tokens=1,  # Generate only one new token
+                temperature=0.7,
+                top_k=50,
+                repetition_penalty=1.0,
+                pad_token_id=mt.tokenizer.pad_token_id,
+                eos_token_id=mt.tokenizer.eos_token_id,
+                return_dict_in_generate=True,
+                output_scores=True  # Include logits in the output
+            )
             alldata.append(t.output[0])
     alldata = torch.cat(alldata)
     noise_level = alldata.std().item()
