@@ -1,0 +1,1 @@
+python bertattack.py --data_path  /projects/p32013/DNABERT-meta/BERT-Attack/GUE/mouse/3/cat.csv --mlm_path zhihan1996/DNABERT-2-117M --tgt_path /projects/p32013/DNABERT-meta/ADFAR/src/experiments/GUE/3/4times_adv_double_0-7 --output_dir /projects/p32013/DNABERT-meta/BERT-Attack/results/adfar/3.json --num_label 2 --use_bpe 0 --k 48 --threshold_pred_score 0 --start 0 --end 100

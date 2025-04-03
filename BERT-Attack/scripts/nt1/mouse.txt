@@ -1,0 +1,1 @@
+python ntattack.py --data_path  /projects/p32013/DNABERT-meta/BERT-Attack/GUE/mouse/1/cat.csv --mlm_path zhihan1996/DNABERT-2-117M --tgt_path /scratch/hlv8980/GERM_ICML/output_nt_Full_double/nt_dnabert2_Full_double_1 --output_dir /projects/p32013/DNABERT-meta/BERT-Attack/results/nt1/1.json --num_label 2 --use_bpe 0 --k 48 --threshold_pred_score 0 --start 0 --end 650

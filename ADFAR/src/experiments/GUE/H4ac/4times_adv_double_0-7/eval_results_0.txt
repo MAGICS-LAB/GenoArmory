@@ -1,0 +1,10 @@
+eval_loss = 0.11242979764938354
+eval_accuracy = 0.4818395470569384
+eval_f1 = 0.16213047260113367
+eval_matthews_correlation = 0.38583687853236204
+eval_precision = 0.12039227900190957
+eval_recall = 0.2482060655293799
+eval_runtime = 91.6666
+eval_samples_per_second = 612.72
+eval_steps_per_second = 38.302
+epoch = 5.0

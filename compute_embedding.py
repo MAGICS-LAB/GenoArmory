@@ -25,12 +25,22 @@ def calculate_llm_embedding(dna_sequences, model_name_or_path, model_max_length=
             use_fast=True,
             trust_remote_code=True,
         )
-
-
-    model = transformers.AutoModel.from_pretrained(
+    
+    
+    config = transformers.AutoConfig.from_pretrained( 
             model_name_or_path,
             trust_remote_code=True,
-            torch_dtype=torch.bfloat16, 
+            revision="1.1_fix"
+    )
+
+
+
+    model = transformers.AutoModelForCausalLM.from_pretrained(
+            model_name_or_path,
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16,
+            config = config, 
+            revision="1.1_fix"
             #attn_implementation="flash_attention_2",
         )
     
@@ -40,8 +50,7 @@ def calculate_llm_embedding(dna_sequences, model_name_or_path, model_max_length=
         model = nn.DataParallel(model)
         
     model.to("cuda")
-
-
+    
     train_loader = util_data.DataLoader(dna_sequences, batch_size=batch_size*n_gpu, shuffle=False, num_workers=2*n_gpu)
     for j, batch in enumerate(tqdm.tqdm(train_loader)):
         with torch.no_grad():
@@ -74,8 +83,8 @@ def calculate_llm_embedding(dna_sequences, model_name_or_path, model_max_length=
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_path", type=str, default='/projects/p32013/DNABERT-meta/meta-100M', help="model name or path")
-    parser.add_argument("--data_path", type=str, default='/projects/p32013/DNABERT-meta/GUE/0/test.csv', help="path to the DNA sequences. Expect a txt file with each line as a DNA sequence")
+    parser.add_argument("--model_path", type=str, default='togethercomputer/evo-1-131k-base', help="model name or path")
+    parser.add_argument("--data_path", type=str, default='/projects/p32013/DNABERT-meta/GUE/0/train.csv', help="path to the DNA sequences. Expect a txt file with each line as a DNA sequence")
     parser.add_argument("--batch_size", type=int, default=16)  # adjust this to fit your GPU
     parser.add_argument("--model_max_length", type=int, default=1024)  # set this as 0.25 * DNA_length
     parser.add_argument("--output_path", type=str, default=None)
