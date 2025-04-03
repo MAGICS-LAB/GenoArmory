@@ -1,0 +1,34 @@
+{
+  "_name_or_path": "/scratch/hlv8980/GERM_ICML/output_zhihan_vanilla_Full_double/zhihan_vanilla_dnabert2_Full_double_H3K36me3",
+  "alibi_starting_size": 512,
+  "architectures": [
+    "BertForSequenceClassificationAdvV2"
+  ],
+  "attention_probs_dropout_prob": 0.0,
+  "auto_map": {
+    "AutoConfig": "configuration_bert.BertConfig",
+    "AutoModel": "zhihan1996/DNABERT-2-117M--bert_layers.BertModel",
+    "AutoModelForMaskedLM": "zhihan1996/DNABERT-2-117M--bert_layers.BertForMaskedLM",
+    "AutoModelForSequenceClassification": "zhihan1996/DNABERT-2-117M--bert_layers.BertForSequenceClassification"
+  },
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "svd_reserve_size": 0,
+  "torch_dtype": "float32",
+  "transformers_version": "4.49.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 4096
+}
