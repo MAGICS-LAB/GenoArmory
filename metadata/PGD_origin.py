@@ -5,8 +5,8 @@ import json
 import shutil
 
 # 源文件和目标文件路径
-src_path = '/projects/p32013/DNABERT-meta/metadata/BERTAttack/og.json'
-dst_path = '/projects/p32013/DNABERT-meta/metadata/FREELB/og-PGD.json'
+src_path = 'metadata/BERTAttack/og.json'
+dst_path = 'metadata/FREELB/og-PGD.json'
 
 # 先备份目标文件
 shutil.copyfile(dst_path, dst_path + '.bak')

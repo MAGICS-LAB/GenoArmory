@@ -2,7 +2,7 @@
 
 function runexp {
 
-export GLUE_DIR='/projects/p32013/DNABERT-meta/BERT-Attack/GUE/mouse'
+export GLUE_DIR='BERT-Attack/GUE/mouse'
 export TASK_NAME=${1}
 
 gpu=${2}      # The GPU you want to use
@@ -52,7 +52,7 @@ python examples/run_glue_freelb2.py \
 
 
 # runexp TASK_NAME  gpu      model_name      adv_lr  adv_mag  anorm  asteps  lr     bsize  grad_accu  hdp  adp      ts     ws     seed      wd  model_type
-runexp     0       0       /scratch/hlv8980/GERM_ICML/output_zhihan_vanilla_Full_double/zhihan_vanilla_dnabert2_Full_double_0         1e-1    6e-1      0    2    1e-5     32       1        0.1   0    20935   1256     42     1e-2   dnabert
+runexp     0       0       /scratch/anonymous/dnabert2_0         1e-1    6e-1      0    2    1e-5     32       1        0.1   0    20935   1256     42     1e-2   dnabert
 
 # runexp  MRPC        0       albert-xxlarge-v2   3e-2       0      0    4    2e-5     16       1        0.1   0      800    200     42     1e-2
 

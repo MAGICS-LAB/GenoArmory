@@ -4,7 +4,7 @@
   ],
   "model": "GenomeOcean",
   "data_base_dir": "GUE",
-  "model_base_dir": "magicslabnu/GenomeOcean-100M-finetuned-H3",
+  "model_base_dir": "anonymous/GenomeOcean-100M-finetuned-H3",
   "output_base_dir": "test/PGD",
   "tokenizer_base_dir": "pGenomeOcean/GenomeOcean-100M",
   "model_type": "og",

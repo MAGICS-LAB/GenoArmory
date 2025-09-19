@@ -23,8 +23,8 @@ def parse_all_results(path: str):
     return m1["accuracy"], m2["accuracy"]
 
 def main():
-    results_dir = "/projects/p32013/DNABERT-meta/fimba-attack/results/og"
-    meta_json   = "/projects/p32013/DNABERT-meta/metadata/FIMBA/og.json"
+    results_dir = "fimba-attack/results/og"
+    meta_json   = "metadata/FIMBA/og.json"
 
     # 1) 收集所有子文件夹的指标
     parsed = {}

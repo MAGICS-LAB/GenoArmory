@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 # 设置主路径
-root_dir = "/projects/p32013/DNABERT-meta/UAP/results"
+root_dir = "UAP/results"
 
 # 存储结果
 asr_results = []

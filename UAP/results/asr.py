@@ -3,7 +3,7 @@ import json
 import csv
 
 # 设置你的results路径
-results_dir = "/projects/p32013/DNABERT-meta/UAP/results"
+results_dir = "UAP/results"
 output_csv = "asr_results.csv"
 
 # 准备输出数据

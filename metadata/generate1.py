@@ -21,8 +21,8 @@ def normalize(name):
     return re.sub(r"[_\-]", "", name).lower()
 
 def main():
-    results_dir = "/projects/p32013/DNABERT-meta/PGD/results/FreeLB/dnabert"
-    json_file   = "/projects/p32013/DNABERT-meta/metadata/FREELB/DNABERT2-PGD.json"
+    results_dir = "PGD/results/FreeLB/dnabert"
+    json_file   = "metadata/FREELB/DNABERT2-PGD.json"
 
     # 1) 收集所有 final accuracy
     parsed = {}

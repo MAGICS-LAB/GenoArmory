@@ -3,10 +3,10 @@ import json
 # You need to initialize GenoArmory with a model and tokenizer.
 # For visualization, you don't need a real model/tokenizer, so you can use None if the method doesn't use them.
 gen = GenoArmory(model=None, tokenizer=None)
-params_file = '/projects/p32013/DNABERT-meta/scripts/PGD/pgd_dnabert.json'
+params_file = 'scripts/PGD/pgd_dnabert.json'
 # gen.visualization(
-#     folder_path='/projects/p32013/DNABERT-meta/BERT-Attack/results/meta/test',
-#     output_pdf_path='/projects/p32013/DNABERT-meta/BERT-Attack/results/meta/test'
+#     folder_path='BERT-Attack/results/meta/test',
+#     output_pdf_path='BERT-Attack/results/meta/test'
 # )
 
 
@@ -21,6 +21,6 @@ if params_file:
 
 gen.attack(
     attack_method='pgd',
-    model_path='magicslabnu/GERM',
+    model_path='anonymous_model',
     **kwargs
 )

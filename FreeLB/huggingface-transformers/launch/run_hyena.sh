@@ -4,7 +4,7 @@ tasks=( "prom_300_all" "prom_300_notata" "prom_300_tata" "tf0" "tf1" "tf2" "tf3"
 
 model="hyena"
 
-project_root="/projects/p32013/DNABERT-meta/FreeLB/huggingface-transformers"
+project_root="FreeLB/huggingface-transformers"
 log_dir="${project_root}/logs"
 ckpt_dir="${project_root}/checkpoints"
 
@@ -14,10 +14,10 @@ mkdir -p "${ckpt_dir}"
 function runexp {
     local task=$1
 
-    export GUE_DIR='/projects/p32013/DNABERT-meta/GUE'
+    export GUE_DIR='GUE'
 
     gpu=0                  
-    mname="/scratch/hlv8980/Attack_Benchmark/models/${model}/${task}/origin"
+    mname="/scratch/anonymous/Attack_Benchmark/models/${model}/${task}/origin"
     alr=1e-1
     amag=6e-1
     anorm=0

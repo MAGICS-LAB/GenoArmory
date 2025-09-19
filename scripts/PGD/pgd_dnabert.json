@@ -4,7 +4,7 @@
   ],
   "model": "dnabert",
   "data_base_dir": "GUE",
-  "model_base_dir": "magicslabnu/DNABERT-2-finetuned-H3",
+  "model_base_dir": "anonymous/DNABERT-2-finetuned-H3",
   "output_base_dir": "test/PGD",
   "tokenizer_base_dir": "zhihan1996/DNABERT-2-117M",
   "model_type": "bert",

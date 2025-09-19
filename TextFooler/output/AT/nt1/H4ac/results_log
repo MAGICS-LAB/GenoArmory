@@ -1,1 +1,1 @@
-For target model /projects/p32013/DNABERT-meta/GUE/H4ac/five_percent/cat.csv: original accuracy: 84.400%, adv accuracy: 20.100%, avg changed rate: 1.378%, num of queries: 108.2
+For target model GUE/H4ac/five_percent/cat.csv: original accuracy: 84.400%, adv accuracy: 20.100%, avg changed rate: 1.378%, num of queries: 108.2

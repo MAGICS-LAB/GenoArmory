@@ -18,7 +18,7 @@
   "num_train_epochs": 5,
   "learning_rate": 3e-5,
   "attack_methods": "pgd",
-  "target_model_path": "magicslabnu/DNABERT-2-finetuned-H3",
+  "target_model_path": "anonymous/DNABERT-2-finetuned-H3",
   "tokenizer_path": "zhihan1996/DNABERT-2-117M",
   "output_base_dir": "test/PGD",
   "task_name": "0",

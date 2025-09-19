@@ -99,5 +99,5 @@ tf3     0.7455
 tf4     0.485172
 """
 
-json_path = "/projects/p32013/DNABERT-meta/metadata/PGD/og.json"
+json_path = "metadata/PGD/og.json"
 update_orign_acc_from_baseline(json_path, baseline_data)

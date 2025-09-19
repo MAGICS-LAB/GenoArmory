@@ -5,11 +5,11 @@ export MODEL_CACHE_DIR=".hf_cache"
 
 module load gcc/12.3.0-gcc 
 
-cd /projects/p32013/DNABERT-meta/test
+cd test
 
 python train.py \
-    --model_name_or_path "magicslabnu/NT2-500M-multi_species-finetuned-tf0" \
-    --data_path "/projects/p32013/DNABERT-meta/GUE/0" \
+    --model_name_or_path "anonymous/NT2-500M-multi_species-finetuned-tf0" \
+    --data_path "GUE/0" \
     --kmer -1 \
     --run_name "test" \
     --model_max_length 256 \
@@ -20,7 +20,7 @@ python train.py \
     --num_train_epochs 4 \
     --fp16 \
     --save_steps 200 \
-    --output_dir "/scratch/hlv8980/Attack_Benchmark/test" \
+    --output_dir "/scratch/anonymous/Attack_Benchmark/test" \
     --evaluation_strategy steps \
     --eval_steps 200 \
     --warmup_ratio 0.05 \

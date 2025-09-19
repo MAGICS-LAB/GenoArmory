@@ -1,1 +1,1 @@
-For target model /projects/p32013/DNABERT-meta/GUE/H3/cat.csv: original accuracy: 94.100%, adv accuracy: 24.500%, avg changed rate: 2.617%, num of queries: 115.1
+For target model GUE/H3/cat.csv: original accuracy: 94.100%, adv accuracy: 24.500%, avg changed rate: 2.617%, num of queries: 115.1

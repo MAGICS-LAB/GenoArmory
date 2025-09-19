@@ -45,7 +45,7 @@ def process_folders(input_folder):
             print(f"Empty CSV generated (no valid data): {input_file} → {output_file}")
 
 # 设置输入目录
-input_dir = "/projects/p32013/DNABERT-meta/TextFooler/output/hyena"
+input_dir = "TextFooler/output/hyena"
 
 # 运行处理
 process_folders(input_dir)

@@ -1,6 +1,6 @@
 {
   "task_name": "H3K4me3",
-  "model_name": "magicslabnu/DNABERT-2-finetuned-H3K4me3",
+  "model_name": "anonymous/DNABERT-2-finetuned-H3K4me3",
   "model_type": "bert",
   "epsilon": 10.0,
   "max_seq_length": 256,
