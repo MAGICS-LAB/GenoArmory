@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.9089664613278576,
+        "f1": 0.9074666952391157,
+        "matthews_correlation": 0.8152500704810886,
+        "precision": 0.9089995870959848,
+        "recall": 0.9062551029320736
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.42505133470225875,
+        "f1": 0.4248247159836527,
+        "matthews_correlation": -0.134774499219534,
+        "precision": 0.4322461389627889,
+        "recall": 0.4329773781087537
+    },
+    "task_name": "H4"
+}

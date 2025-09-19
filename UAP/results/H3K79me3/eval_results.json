@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.8228155339805825,
+        "f1": 0.82062089695394,
+        "matthews_correlation": 0.6458540569818547,
+        "precision": 0.8267468291456268,
+        "recall": 0.8191518828282283
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.470873786407767,
+        "f1": 0.3201320132013201,
+        "matthews_correlation": 0.0,
+        "precision": 0.2354368932038835,
+        "recall": 0.5
+    },
+    "task_name": "H3K79me3"
+}

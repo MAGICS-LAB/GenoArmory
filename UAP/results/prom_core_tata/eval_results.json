@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.8270799347471451,
+        "f1": 0.8248609194410903,
+        "matthews_correlation": 0.6683320601063825,
+        "precision": 0.8423089812332439,
+        "recall": 0.8262167858967808
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.48450244698205547,
+        "f1": 0.39025710760242754,
+        "matthews_correlation": -0.04036698255526972,
+        "precision": 0.4667676767676767,
+        "recall": 0.4877416538920116
+    },
+    "task_name": "prom_core_tata"
+}

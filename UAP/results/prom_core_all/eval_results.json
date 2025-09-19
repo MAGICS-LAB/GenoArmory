@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.839695945945946,
+        "f1": 0.8395459552204785,
+        "matthews_correlation": 0.6803995028254873,
+        "precision": 0.840781048667546,
+        "recall": 0.8396194457227592
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.5010135135135135,
+        "f1": 0.3346846846846847,
+        "matthews_correlation": -0.009097011358754228,
+        "precision": 0.4380920162381597,
+        "recall": 0.4996658120220016
+    },
+    "task_name": "prom_core_all"
+}

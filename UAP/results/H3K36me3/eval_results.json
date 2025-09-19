@@ -1,0 +1,16 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.7961582568807339,
+        "f1": 0.7922733918465417,
+        "matthews_correlation": 0.5854303448315755,
+        "precision": 0.7946170236815866,
+        "recall": 0.790825598234972
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.5567660550458715,
+        "f1": 0.3576427255985267,
+        "matthews_correlation": 0.0,
+        "precision": 0.27838302752293576,
+        "recall": 0.5
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.84039947239495,
+        "f1": 0.8403205291590772,
+        "matthews_correlation": 0.6816355521700188,
+        "precision": 0.8411867813106246,
+        "recall": 0.8404491699512231
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.5010363670623704,
+        "f1": 0.33379362289731357,
+        "matthews_correlation": 0.0,
+        "precision": 0.2505181835311852,
+        "recall": 0.5
+    },
+    "task_name": "prom_core_notata"
+}

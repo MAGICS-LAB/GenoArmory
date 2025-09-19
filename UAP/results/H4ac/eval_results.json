@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.7252199413489736,
+        "f1": 0.7251839943632603,
+        "matthews_correlation": 0.45446667409633973,
+        "precision": 0.7269567992104712,
+        "recall": 0.7275102118362307
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.46774193548387094,
+        "f1": 0.31868131868131866,
+        "matthews_correlation": 0.0,
+        "precision": 0.23387096774193547,
+        "recall": 0.5
+    },
+    "task_name": "H4ac"
+}

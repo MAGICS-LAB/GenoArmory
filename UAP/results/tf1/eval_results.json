@@ -1,0 +1,17 @@
+{
+    "clean_validation_metrics": {
+        "accuracy": 0.861,
+        "f1": 0.8597873003608207,
+        "matthews_correlation": 0.7348228465759246,
+        "precision": 0.8739367145775241,
+        "recall": 0.861
+    },
+    "perturbed_validation_metrics": {
+        "accuracy": 0.475,
+        "f1": 0.47428028971662206,
+        "matthews_correlation": -0.050137464826380984,
+        "precision": 0.4748623462078341,
+        "recall": 0.475
+    },
+    "task_name": "tf1"
+}
