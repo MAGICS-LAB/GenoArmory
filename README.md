@@ -10,15 +10,20 @@
 </p>
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-GenoArmory-ff0000.svg?style=for-the-badge)](https://github.com/MAGICS-LAB/GenoArmory)  [![Github](https://img.shields.io/badge/GenoArmory-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MAGICS-LAB/GenoArmory)  [![Hugging Face Pretrained](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md-dark.svg)](https://huggingface.co/collections/magicslabnu/gfm-67f4d4a9327ee4acdcb3806b) [![Hugging Face Dataset](https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-md.svg)](https://huggingface.co/datasets/magicslabnu/GenoAdv) 
+[![arXiv](https://img.shields.io/badge/arXiv-GenoArmory-ff0000.svg?style=for-the-badge)](https://arxiv.org/abs/2505.10983)  [![Github](https://img.shields.io/badge/GenoArmory-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MAGICS-LAB/GenoArmory)  [![Hugging Face Pretrained](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md-dark.svg)](https://huggingface.co/collections/magicslabnu/gfm-67f4d4a9327ee4acdcb3806b) [![Hugging Face Dataset](https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-md.svg)](https://huggingface.co/datasets/magicslabnu/GenoAdv) 
 </div>
 
 ## Installation
 
 You can install GenoArmory using pip:
-
 ```bash
 pip install genoarmory
+```
+You can also install package from our source code:
+```bash
+git clone https://github.com/MAGICS-LAB/GenoArmory.git
+conda create -n genoarmory pip=3.9
+pip install .
 ```
 
 ## Quick Start
@@ -110,5 +115,13 @@ If you have any question regarding our paper or codes, please feel free to start
 If you use GenoArmory in your work, please kindly cite our paper:
 
 ```
-
+@misc{luo2025genoarmoryunifiedevaluationframework,
+      title={GenoArmory: A Unified Evaluation Framework for Adversarial Attacks on Genomic Foundation Models}, 
+      author={Haozheng Luo and Chenghao Qiu and Yimin Wang and Shang Wu and Jiahao Yu and Han Liu and Binghui Wang and Yan Chen},
+      year={2025},
+      eprint={2505.10983},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.10983}, 
+}
 ```
