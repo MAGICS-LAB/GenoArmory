@@ -1,5 +1,5 @@
 export HF_TOKEN='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'
-export HF_HOME="/projects/p32013/.cache/"
+export HF_HOME="/.cache/"
 
 # python bertattack.py --data_path  data/GUE/EMP/H3/test.csv --mlm_path zhihan1996/DNABERT-2-117M --tgt_path zhihan1996/DNABERT-2-117M --output_dir results/H3-test1.csv --num_label 2 --use_bpe 1 --k 48 --threshold_pred_score 0 --start 0 --end 10
 

@@ -1,5 +1,3 @@
-cd /projects/p32013/DNABERT-meta
-
 ## Visualization
 # python GenoArmory.py --model_path anonymous_model visualize --folder_path BERT-Attack/results/meta/test --save_path BERT-Attack/results/meta/test/frequency.pdf
 
