@@ -6,12 +6,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="genoarmory",
     version="0.1.0",
-    author="Robin Luo & Jerry Qiu",
-    author_email="robinluo2027@u.northwestern.edu",
     description="A DNA sequence Adversial attack and defense benchmark",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/MAGICS-LAB/DNAAttack",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",

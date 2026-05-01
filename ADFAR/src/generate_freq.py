@@ -55,7 +55,7 @@ def generate_subword_freq(data_dir):
 
 
 # Generate frequencies for GUE datasets
-gue_dir = "/projects/p32013/DNABERT-meta/GUE"
+gue_dir = "GUE"
 generate_subword_freq(gue_dir)
 
 

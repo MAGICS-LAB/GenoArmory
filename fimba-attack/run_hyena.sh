@@ -9,8 +9,8 @@ for task in "${tasks[@]}"
 do
     echo "Running task: $task"
     python "${SCRIPT_DIR}/shap_dl_analysis2.py" \
-        --data_dir /projects/p32013/DNABERT-meta/GUE/${task}/fimba \
-        --model_name_or_path /scratch/hlv8980/Attack_Benchmark/models/${model}/${task}/origin \
+        --data_dir GUE/${task}/fimba \
+        --model_name_or_path /scratch/anonymous/Attack_Benchmark/models/${model}/${task}/origin \
         --task_name $task --num_label 2  \
         --max_seq_length 128 --batch_size 1 \
         --dataset_name $task --model_type ${model} \
@@ -18,12 +18,12 @@ do
         --shap_output_file "${SCRIPT_DIR}/shap_dicts/shap_${model}_fimba_$task.pkl"
 
     python "${SCRIPT_DIR}/runatk_standalone.py" \
-        --data_dir /projects/p32013/DNABERT-meta/GUE/${task}/fimba \
-        --model_name_or_path /scratch/hlv8980/Attack_Benchmark/models/${model}/${task}/origin  \
+        --data_dir GUE/${task}/fimba \
+        --model_name_or_path /scratch/anonymous/Attack_Benchmark/models/${model}/${task}/origin  \
         --task_name $task --num_label 2  --max_seq_length 128 \
         --shap_file "${SCRIPT_DIR}/shap_dicts/shap_${model}_fimba_$task.pkl" \
         --increase_fn --batch_size 64 --model_type ${model} \
-        --output_dir /projects/p32013/DNABERT-meta/fimba-attack/results/${model} \
+        --output_dir fimba-attack/results/${model} \
         --overwrite_cache --overwrite_output_dir
 done
 

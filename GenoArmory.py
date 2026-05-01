@@ -1115,7 +1115,7 @@ def run_textfooler_attack_script(
         counter_fitting_embeddings_path=f"./TextFooler/embeddings/subword_{target_model}_embeddings.txt"
         counter_fitting_cos_sim_path=f"./TextFooler/cos_sim_counter_fitting/cos_sim_counter_fitting_{target_model}.npy"
         USE_cache_path="./TextFooler/tf_cache"
-        tokenizer_path=f"/scratch/hlv8980/Attack_Benchmark/models/{target_model}/{dataset_dir}/origin"
+        tokenizer_path=f"/scratch/anonymous/Attack_Benchmark/models/{target_model}/{dataset_dir}/origin"
         
         command_template = (
             f'python {attack_script_path} --dataset_path {dataset_path} '

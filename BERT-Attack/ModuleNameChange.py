@@ -6,7 +6,7 @@ import glob
 
 def find_safetensor_files():
     """Find all model.safetensors files in the specified directory structure"""
-    base_path = "/scratch/hlv8980/Attack_Benchmark/models/ADFAR/GUE/GUE/og"
+    base_path = "/scratch/anonymous/Attack_Benchmark/models/ADFAR/GUE/GUE/og"
     pattern = os.path.join(base_path, "*/4times_adv_double_0-7/model.safetensors")
     return glob.glob(pattern)
 

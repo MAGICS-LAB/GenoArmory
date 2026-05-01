@@ -30,8 +30,8 @@ def compute_average_query(json_path):
 
 def main():
     # 请根据实际情况修改这两行路径
-    results_dir = '/projects/p32013/DNABERT-meta/BERT-Attack/results/freelb/hyena'
-    meta_file   = '/projects/p32013/DNABERT-meta/metadata/FREELB/hyena-BERTAttack.json'
+    results_dir = 'BERT-Attack/results/freelb/hyena'
+    meta_file   = 'metadata/FREELB/hyena-BERTAttack.json'
 
     if not os.path.isdir(results_dir):
         print(f'ERROR: 目录不存在 {results_dir}', file=sys.stderr)

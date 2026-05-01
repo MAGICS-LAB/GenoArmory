@@ -4,7 +4,7 @@
   ],
   "model": "HyenaDNA",
   "data_base_dir": "GUE",
-  "model_base_dir": "magicslabnu/Hyena-small-32k_seqlen-finetuned-H3",
+  "model_base_dir": "anonymous/Hyena-small-32k_seqlen-finetuned-H3",
   "output_base_dir": "test/PGD",
   "tokenizer_base_dir": "LongSafari/hyenadna-small-32k-seqlen-hf",
   "model_type": "hyena",

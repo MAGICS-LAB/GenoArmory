@@ -1,1 +1,1 @@
-For target model /projects/p32013/DNABERT-meta/GUE/prom_core_all/five_percent/cat.csv: original accuracy: 87.500%, adv accuracy: 0.000%, avg changed rate: 1.551%, num of queries: 70.6
+For target model GUE/prom_core_all/five_percent/cat.csv: original accuracy: 87.500%, adv accuracy: 0.000%, avg changed rate: 1.551%, num of queries: 70.6

@@ -3,7 +3,7 @@
     "H3"
   ],
   "model": "dnabert",
-  "target_model_path": "magicslabnu/DNABERT-2-finetuned-H3",
+  "target_model_path": "anonymous/DNABERT-2-finetuned-H3",
   "tokenizer_path": "zhihan1996/DNABERT-2-117M",
   "output_dir_base": "test/FIMBA",
   "targert_model": "bert",

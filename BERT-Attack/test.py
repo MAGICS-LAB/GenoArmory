@@ -1,6 +1,6 @@
 # Install necessary libraries
 # !pip install torch transformers textattack datasets
-# export HF_HOME="/projects/p32013/.cache/"
+# export HF_HOME="/.cache/"
 
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification

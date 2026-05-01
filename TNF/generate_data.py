@@ -2,8 +2,8 @@ import os
 import pandas as pd
 
 # Define directories
-source_root = "/projects/p32013/DNABERT-meta/TNF/results"
-dest_root = "/projects/p32013/DNABERT-meta/GUE"
+source_root = "TNF/results"
+dest_root = "GUE"
 
 # Iterate through all subdirectories in the source root directory
 for subdir in os.listdir(source_root):

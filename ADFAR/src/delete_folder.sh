@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 设置目标路径
-base_dir="/projects/p32013/DNABERT-meta/ADFAR/src/experiments/GUE"
+base_dir="ADFAR/src/experiments/GUE"
 
 # 遍历 base_dir 下所有子文件夹
 for dir in "$base_dir"/*/; do

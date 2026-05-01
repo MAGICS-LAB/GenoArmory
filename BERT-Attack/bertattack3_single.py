@@ -369,7 +369,7 @@ def run_attack():
     parser.add_argument("--use_bpe", type=int, )
     parser.add_argument("--k", type=int, )
     parser.add_argument("--threshold_pred_score", type=float, )
-    parser.add_argument('--clm_path', type=str, default='/projects/p32013/DNABERT-meta/meta-100M')
+    parser.add_argument('--clm_path', type=str, default='meta-100M')
 
 
     args = parser.parse_args()

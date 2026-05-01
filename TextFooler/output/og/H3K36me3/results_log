@@ -1,2 +1,2 @@
-For target model /projects/p32013/DNABERT-meta/GUE/H3K36me3/cat.csv: original accuracy: 88.400%, adv accuracy: 0.000%, avg changed rate: 0.784%, num of queries: 300.2
-For target model /projects/p32013/DNABERT-meta/GUE/H3K36me3/cat.csv: original accuracy: 84.200%, adv accuracy: 0.000%, avg changed rate: 1.107%, num of queries: 381.1
+For target model GUE/H3K36me3/cat.csv: original accuracy: 88.400%, adv accuracy: 0.000%, avg changed rate: 0.784%, num of queries: 300.2
+For target model GUE/H3K36me3/cat.csv: original accuracy: 84.200%, adv accuracy: 0.000%, avg changed rate: 1.107%, num of queries: 381.1

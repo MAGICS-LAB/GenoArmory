@@ -1,6 +1,6 @@
 {
   "task_name": "tf4",
-  "model_name": "magicslabnu/DNABERT-2-finetuned-tf4",
+  "model_name": "anonymous/DNABERT-2-finetuned-tf4",
   "model_type": "bert",
   "epsilon": 10.0,
   "max_seq_length": 256,

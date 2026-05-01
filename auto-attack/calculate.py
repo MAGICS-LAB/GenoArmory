@@ -35,7 +35,7 @@ def process_json_folder(folder_path):
 
 # 示例运行
 if __name__ == "__main__":
-    folder = "/projects/p32013/DNABERT-meta/auto-attack/results"  # 替换为你的 JSON 文件夹路径
+    folder = "auto-attack/results"  # 替换为你的 JSON 文件夹路径
     results = process_json_folder(folder)
     
     for r in results:

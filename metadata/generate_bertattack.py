@@ -72,6 +72,6 @@ def update_bertattack_from_csv(json_path: str, csv_path: str):
     print(f"✔ 已写入 {json_path}")
 
 # 调用示例
-json_file = "/projects/p32013/DNABERT-meta/metadata/FREELB/hyena-BERTAttack.json"
-csv_file  = "/projects/p32013/DNABERT-meta/BERT-Attack/results/freelb/hyena/attack_results.csv"
+json_file = "metadata/FREELB/hyena-BERTAttack.json"
+csv_file  = "BERT-Attack/results/freelb/hyena/attack_results.csv"
 update_bertattack_from_csv(json_file, csv_file)

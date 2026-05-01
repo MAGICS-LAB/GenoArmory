@@ -4,7 +4,7 @@
   ],
   "model": "NT1",
   "data_base_dir": "GUE",
-  "model_base_dir": "magicslabnu/NT1-500M-human_ref-finetuned-H3",
+  "model_base_dir": "anonymous/NT1-500M-human_ref-finetuned-H3",
   "output_base_dir": "test/PGD",
   "tokenizer_base_dir": "InstaDeepAI/nucleotide-transformer-500m-human-ref",
   "model_type": "nt1",

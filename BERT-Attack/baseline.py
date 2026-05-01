@@ -64,9 +64,9 @@ def tokenize_and_mutate2(dna_sequence, tokenizer, change_rate=0.1):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--model_name', default="/projects/p32013/DNA/FT/DNABERT-2-FT/finetune/output_zhihan_Full_double/zhihan_dnabert2_Full_double_0")
-parser.add_argument('--input', default='/projects/p32013/DNABERT-meta/BERT-Attack/GUE/mouse/0/cat.csv')
-parser.add_argument('--output', default='/projects/p32013/DNABERT-meta/BERT-Attack/GUE/mouse/0/new.csv')
+parser.add_argument('--model_name', default="dnabert2_0")
+parser.add_argument('--input', default='BERT-Attack/GUE/mouse/0/cat.csv')
+parser.add_argument('--output', default='BERT-Attack/GUE/mouse/0/new.csv')
 parser.add_argument('--change_rate', default=0.087, type=float)
 parser.add_argument('--num_label', default=2)
 args = parser.parse_args()

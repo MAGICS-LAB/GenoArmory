@@ -10,7 +10,7 @@ task = args.task
 
 
 # Set the base directory for the datasets
-base_dir = '/projects/p32013/DNABERT-meta/GUE'
+base_dir = 'GUE'
 
 dataset_dirs = ["tf4"]
 
@@ -20,7 +20,7 @@ dataset_dirs = ["tf4"]
 for dataset_dir in dataset_dirs:
   dataset_path = os.path.join(base_dir, dataset_dir, 'cat.csv')
   ### model ckpt
-  target_model_path = f"/scratch/hlv8980/Attack_Benchmark/models/{task}/{dataset_dir}/origin"
+  target_model_path = f"/scratch/anonymous/Attack_Benchmark/models/{task}/{dataset_dir}/origin"
 
   # # Check if the dataset file exists
   # if os.path.exists(dataset_path):
@@ -42,15 +42,15 @@ for dataset_dir in dataset_dirs:
             f'--target_model {task} ' \
             f'--target_model_path {target_model_path} ' \
             '--max_seq_length 256 --batch_size 32 ' \
-            f'--counter_fitting_embeddings_path  /projects/p32013/DNABERT-meta/TextFooler/embeddings/subword_{task}_embeddings.txt ' \
-            f'--counter_fitting_cos_sim_path /projects/p32013/DNABERT-meta/TextFooler/cos_sim_counter_fitting/cos_sim_counter_fitting_{task}.npy ' \
-            '--USE_cache_path /projects/p32013/DNABERT-meta/TextFooler/tf_cache ' \
+            f'--counter_fitting_embeddings_path  TextFooler/embeddings/subword_{task}_embeddings.txt ' \
+            f'--counter_fitting_cos_sim_path TextFooler/cos_sim_counter_fitting/cos_sim_counter_fitting_{task}.npy ' \
+            '--USE_cache_path TextFooler/tf_cache ' \
             f'--nclasses 2 --output_dir adv_results/{task}/{dataset_dir}' 
           
 
   command4 = 'python get_pure_adversaries.py ' \
     f'--adversaries_path adv_results/{task}/{dataset_dir}/adversaries.txt ' \
-    f'--output_path /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/attacked_data ' \
+    f'--output_path GUE/{dataset_dir}/{task}/attacked_data ' \
     '--times 1 ' \
     '--change 0 ' \
     '--txtortsv tsv ' \
@@ -58,10 +58,10 @@ for dataset_dir in dataset_dirs:
 
   # 1.3 Construct the training data
   command5 = 'python combine_data.py ' \
-    f'--add_file /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/attacked_data/pure_adversaries.tsv ' \
+    f'--add_file GUE/{dataset_dir}/{task}/attacked_data/pure_adversaries.tsv ' \
     '--change_label 2 ' \
-    f'--original_dataset /projects/p32013/DNABERT-meta/GUE/{dataset_dir} ' \
-    f'--output_path /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/combined_data/2times_adv_0-3/ ' \
+    f'--original_dataset GUE/{dataset_dir} ' \
+    f'--output_path GUE/{dataset_dir}/{task}/combined_data/2times_adv_0-3/ ' \
     '--isMR 0'
 
   command6 = 'python run_simplification.py ' \
@@ -70,17 +70,17 @@ for dataset_dir in dataset_dirs:
     '--syn_num 20 ' \
     '--most_freq_num 10 ' \
     '--simplify_version random_freq_v1 ' \
-    f'--cos_sim_file /projects/p32013/DNABERT-meta/TextFooler/cos_sim_counter_fitting/cos_sim_counter_fitting_{task}.npy ' \
-    f'--counterfitted_vectors /projects/p32013/DNABERT-meta/TextFooler/embeddings/subword_{task}_embeddings.txt ' \
-    f'--file_to_simplify /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/combined_data/2times_adv_0-3/train.tsv ' \
-    f'--output_path /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/simplified_data/2times_adv_0-3/ ' \
-    f'--freq_file /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/subword_frequencies.json'
+    f'--cos_sim_file TextFooler/cos_sim_counter_fitting/cos_sim_counter_fitting_{task}.npy ' \
+    f'--counterfitted_vectors TextFooler/embeddings/subword_{task}_embeddings.txt ' \
+    f'--file_to_simplify GUE/{dataset_dir}/{task}/combined_data/2times_adv_0-3/train.tsv ' \
+    f'--output_path GUE/{dataset_dir}/{task}/simplified_data/2times_adv_0-3/ ' \
+    f'--freq_file GUE/{dataset_dir}/subword_frequencies.json'
 
   command7 = 'python combine_data.py ' \
-    f'--add_file /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/simplified_data/2times_adv_0-3/train.tsv ' \
+    f'--add_file GUE/{dataset_dir}/{task}/simplified_data/2times_adv_0-3/train.tsv ' \
     '--change_label 4 ' \
-    f'--original_dataset /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/combined_data/2times_adv_0-3/ ' \
-    f'--output_path /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/combined_data/4times_adv_0-7/ --isMR 0 '
+    f'--original_dataset GUE/{dataset_dir}/{task}/combined_data/2times_adv_0-3/ ' \
+    f'--output_path GUE/{dataset_dir}/{task}/combined_data/4times_adv_0-7/ --isMR 0 '
 
   # Step2. Train our proposed model on the constructed training data
   command8 = 'WANDB_DISABLED=true python run_classification_adv.py ' \
@@ -89,8 +89,8 @@ for dataset_dir in dataset_dirs:
     '--do_train ' \
     '--do_eval ' \
     '--attention 2 ' \
-    f'--data_dir /projects/p32013/DNABERT-meta/GUE/{dataset_dir}/{task}/combined_data/4times_adv_0-7/ ' \
-    f'--output_dir /projects/p32013/DNABERT-meta/ADFAR/src/experiments/GUE/{dataset_dir}/{task}/4times_adv_double_0-7 ' \
+    f'--data_dir GUE/{dataset_dir}/{task}/combined_data/4times_adv_0-7/ ' \
+    f'--output_dir ADFAR/src/experiments/GUE/{dataset_dir}/{task}/4times_adv_double_0-7 ' \
     f'--model_name_or_path {target_model_path} ' \
     '--per_device_train_batch_size 2 ' \
     '--per_device_eval_batch_size 2 ' \

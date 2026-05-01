@@ -4,7 +4,7 @@
   ],
   "model": "NT2",
   "data_base_dir": "GUE",
-  "model_base_dir": "magicslabnu/NT2-500M-multi_species-finetuned-H3",
+  "model_base_dir": "anonymous/NT2-500M-multi_species-finetuned-H3",
   "output_base_dir": "test/PGD",
   "tokenizer_base_dir": "InstaDeepAI/nucleotide-transformer-v2-500m-multi-species",
   "model_type": "nt2",

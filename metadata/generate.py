@@ -31,8 +31,8 @@ def normalize(name):
     return re.sub(r"[_\-]", "", name).lower()
 
 def main():
-    base_dir = "/projects/p32013/DNABERT-meta/TextFooler/output/FreeLB/og"
-    json_file = "/projects/p32013/DNABERT-meta/metadata/FREELB/og-TextFooler.json"
+    base_dir = "TextFooler/output/FreeLB/og"
+    json_file = "metadata/FREELB/og-TextFooler.json"
 
     if not os.path.isdir(base_dir):
         print(f"ERROR: 找不到目录 {base_dir}", file=sys.stderr)

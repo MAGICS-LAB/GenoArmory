@@ -1,6 +1,6 @@
 {
   "task_name": "prom_300_notata",
-  "model_name": "magicslabnu/DNABERT-2-finetuned-prom_300_notata",
+  "model_name": "anonymous/DNABERT-2-finetuned-prom_300_notata",
   "model_type": "bert",
   "epsilon": 10.0,
   "max_seq_length": 256,

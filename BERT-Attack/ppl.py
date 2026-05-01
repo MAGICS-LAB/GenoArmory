@@ -15,7 +15,7 @@ tokenizer = AutoTokenizer.from_pretrained(
         trust_remote_code=True
     )
 
-clm_path = "/projects/p32013/DNABERT-meta/meta-100M"
+clm_path = "meta-100M"
 
 
 scorer = lmppl.LM(clm_path)
@@ -33,7 +33,7 @@ checkpoints = [
 
 
 for checkpoint in checkpoints:
-    dict_path = f'/projects/p32013/DNABERT-meta/BERT-Attack/results/meta/{checkpoint}/'
+    dict_path = f'BERT-Attack/results/meta/{checkpoint}/'
     json_file_path = dict_path + f"{checkpoint}.json"
 
 

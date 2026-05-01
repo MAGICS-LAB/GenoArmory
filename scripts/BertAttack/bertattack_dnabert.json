@@ -1,7 +1,7 @@
 {
   "model": "dnabert",
   "data_path": "GUE/H3/cat.csv",
-  "tgt_path": "magicslabnu/DNABERT-2-finetuned-H3",
+  "tgt_path": "anonymous/DNABERT-2-finetuned-H3",
   "mlm_path": "zhihan1996/DNABERT-2-117M",
   "output_dir": "test/BertAttack/H3",
   "num_label": 2,

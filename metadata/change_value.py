@@ -30,7 +30,7 @@ def update_file(path):
     print(f'已更新：{os.path.basename(path)}')
 
 def main():
-    folder = "/projects/p32013/DNABERT-meta/metadata/AT"
+    folder = "metadata/AT"
     for name in os.listdir(folder):
         if name.lower().endswith('.json'):
             update_file(os.path.join(folder, name))

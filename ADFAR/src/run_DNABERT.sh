@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 tasks=("dnabert")
 
-cd /projects/p32013/DNABERT-meta/ADFAR/src
+cd ADFAR/src
 
 for task in "${tasks[@]}"
 do
